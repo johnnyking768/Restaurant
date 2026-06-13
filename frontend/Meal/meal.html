@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Plate | Meal Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="meal.css">
+</head>
+<body>
+  <main class="meal-page">
+    <header class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="../Home/home.html"><span>The</span> Golden Plate</a>
+      <nav class="nav-links">
+        <a href="../Home/home.html">Home</a>
+        <a class="active" href="../Menu/menu.html">Menu</a>
+        <a href="../Location/Location.html">Location</a>
+        <a href="../Home/home.html#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" aria-label="Search meals"><span></span></button>
+        <button class="cart-button" type="button" aria-label="Open cart"><span>0</span></button>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <button class="mobile-nav-backdrop" type="button" aria-label="Close navigation"></button>
+      <div class="mobile-nav-panel">
+        <button class="mobile-nav-close" type="button" aria-label="Close navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <a href="../Home/home.html">Home</a>
+        <a class="active" href="../Menu/menu.html">Menu</a>
+        
+        <a href="../Location/Location.html">Location</a>
+        <a href="../Home/home.html#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="meal-shell" aria-labelledby="meal-title">
+      <aside class="side-rail" aria-label="Meal tools">
+        <a href="../Menu/menu.html" aria-label="Back to menu">&lt;</a>
+        <button type="button" aria-label="Open categories">::</button>
+      </aside>
+
+      <section class="featured-meal">
+        <div class="meal-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <span class="calorie-badge" data-meal-calories>640<br>kcal</span>
+        <img src="../assets/images/hero-jollof-premium.jpg" alt="Party jollof combo with grilled chicken and fish" data-meal-image>
+
+        <div class="meal-copy">
+          <p class="eyebrow" data-meal-kicker>Best Seller</p>
+          <h1 id="meal-title" data-meal-title>Party Jollof Combo</h1>
+          <div class="meal-tags" data-meal-tags>
+            <span>Protein - 38g</span>
+            <span>Spice - Hot</span>
+            <span>Serving - Large</span>
+            <span>Ready - 25 min</span>
+          </div>
+          <p class="meal-description" data-meal-description>Rich orange jollof rice served with grilled chicken, roasted fish, pepper sauce and a fresh onion garnish. Built for proper hunger, not small-small appetite.</p>
+        </div>
+
+        <footer class="meal-actions">
+          <div class="quantity" aria-label="Quantity selector">
+            <button type="button">-</button>
+            <span>1</span>
+            <button type="button">+</button>
+          </div>
+          <strong data-meal-price>N7,500</strong>
+          <button class="add-cart" type="button">Add to Cart</button>
+        </footer>
+      </section>
+
+      <section class="related-meals" aria-label="Related meals" data-related-meals>
+      </section>
+    </section>
+  </main>
+  <script src="../nav.js"></script>
+  <script src="meal.js"></script>
+</body>
+</html>

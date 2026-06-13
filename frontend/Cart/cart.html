@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Cart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="cart.css" />
+</head>
+
+<body>
+  <main class="cart-page">
+    <header class="navbar">
+      <a class="brand" href="../Home/home.html"><span>The</span> Golden Plate</a>
+
+      <nav class="nav-links">
+        <a href="../Home/home.html">Home</a>
+        <a href="../Menu/menu.html">Menu</a>
+        <a href="../Location/Location.html">Location</a>
+        <a href="../Contact/Contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" type="button"><span></span></button>
+        <button class="cart-button active" type="button"><span>0</span></button>
+        <button class="menu-button" type="button"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <section class="cart-hero">
+      <div>
+        <p>Your Golden Basket</p>
+        <h1>Fresh meals ready for checkout.</h1>
+        <span>Review your order, adjust quantity, and complete your food experience.</span>
+      </div>
+
+      <div class="hero-badge">
+        <strong>Fast</strong>
+        <small>Hot delivery</small>
+      </div>
+    </section>
+
+    <section class="cart-layout">
+      <div class="cart-items" data-cart-items></div>
+
+      <aside class="cart-summary">
+        <p>Order Summary</p>
+
+        <div class="summary-card">
+          <div>
+            <span>Items</span>
+            <strong data-summary-count>0</strong>
+          </div>
+
+          <div>
+            <span>Subtotal</span>
+            <strong data-summary-total>N0</strong>
+          </div>
+        </div>
+
+        <div class="delivery-box">
+          <span>Delivery Estimate</span>
+          <strong>25 - 35 mins</strong>
+        </div>
+
+        <a href="../Menu/menu.html">Add More Meals</a>
+        <button type="button" data-checkout>Checkout Now</button>
+      </aside>
+    </section>
+  </main>
+
+  <script src="../nav.js"></script>
+
+  <script>
+    const cartItemsContainer = document.querySelector("[data-cart-items]");
+    const summaryCount = document.querySelector("[data-summary-count]");
+    const summaryTotal = document.querySelector("[data-summary-total]");
+    const checkoutButton = document.querySelector("[data-checkout]");
+    const cartBadge = document.querySelector(".cart-button span");
+
+    function parsePrice(price) {
+      return Number(String(price).replace(/[^0-9]/g, "")) || 0;
+    }
+
+    function formatPrice(amount) {
+      return `N${amount.toLocaleString()}`;
+    }
+
+    function saveItems(items) {
+      window.GoldenPlateCart.saveItems(items);
+      renderCart();
+    }
+
+    function renderCart() {
+      const items = window.GoldenPlateCart.getItems();
+      const itemCount = items.reduce((total, item) => total + item.quantity, 0);
+      const total = items.reduce((sum, item) => sum + parsePrice(item.price) * item.quantity, 0);
+
+      summaryCount.textContent = itemCount;
+      summaryTotal.textContent = formatPrice(total);
+      cartBadge.textContent = itemCount;
+      checkoutButton.disabled = items.length === 0;
+
+      if (items.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <section class="empty-cart">
+            <div class="empty-icon">🍽️</div>
+            <h2>Your plate is empty</h2>
+            <p>Add something tasty from the menu and it will appear here.</p>
+            <a href="../Menu/menu.html">Browse Menu</a>
+          </section>
+        `;
+        return;
+      }
+
+      cartItemsContainer.innerHTML = items.map((item) => `
+        <article class="cart-item" data-cart-id="${item.id}">
+          <img src="${item.image}" alt="${item.alt || item.title}" />
+
+          <div class="item-copy">
+            <span>Golden Plate Meal</span>
+            <h2>${item.title}</h2>
+            <p>${item.price}</p>
+          </div>
+
+          <div class="quantity-control">
+            <button type="button" data-cart-action="decrease">−</button>
+            <strong>${item.quantity}</strong>
+            <button type="button" data-cart-action="increase">+</button>
+          </div>
+
+          <div class="item-total">
+            <span>Total</span>
+            <strong>${formatPrice(parsePrice(item.price) * item.quantity)}</strong>
+          </div>
+
+          <button class="remove-item" type="button" data-cart-action="remove">Remove</button>
+        </article>
+      `).join("");
+    }
+
+    cartItemsContainer.addEventListener("click", (event) => {
+      const action = event.target.dataset.cartAction;
+      if (!action) return;
+
+      const itemId = event.target.closest("[data-cart-id]").dataset.cartId;
+      const items = window.GoldenPlateCart.getItems();
+      const item = items.find((cartItem) => cartItem.id === itemId);
+
+      if (!item) return;
+
+      if (action === "increase") item.quantity += 1;
+      if (action === "decrease") item.quantity -= 1;
+
+      const nextItems = action === "remove" || item.quantity <= 0
+        ? items.filter((cartItem) => cartItem.id !== itemId)
+        : items;
+
+      saveItems(nextItems);
+    });
+
+    checkoutButton.addEventListener("click", () => {
+      checkoutButton.textContent = "Order Confirmed";
+      setTimeout(() => {
+        checkoutButton.textContent = "Checkout Now";
+      }, 1400);
+    });
+
+    renderCart();
+  </script>
+</body>
+</html>

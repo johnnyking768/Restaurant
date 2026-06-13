@@ -1,0 +1,105 @@
+Images downloaded for the Palm & Pepper landing page.
+
+jollof-rice.jpg
+Source: Wikimedia Commons, "Jollof Rice and Chicken.jpg"
+Author: Count Zugu
+License: Wikimedia Commons license stated on file page
+Page: https://commons.wikimedia.org/wiki/File:Jollof_Rice_and_Chicken.jpg
+
+hero-jollof.jpg
+Source: Pexels, "Close-up of Jollof rice with fried plantains and sauce on a plate"
+Author: Studio Saiz
+License: Pexels License
+Page: https://www.pexels.com/photo/diner-with-rice-and-fried-vegetables-17952746/
+
+hero-jollof-premium.jpg
+Source: Pexels, "Close-up of flavorful Nigerian jollof rice with grilled chicken skewers and roasted fish"
+Author: Keesha's Kitchen
+License: Pexels License
+Page: https://www.pexels.com/photo/rice-with-fish-and-vegetables-on-a-serving-dish-13915043/
+
+egusi-soup.jpg
+Source: Wikimedia Commons, "Egusi soup with pounded yam and assorted meats.jpg"
+Author: Onyenachi64
+License: CC BY-SA 4.0
+Page: https://commons.wikimedia.org/wiki/File:Egusi_soup_with_pounded_yam_and_assorted_meats.jpg
+
+plantain-meal.jpg
+Source: Pixabay, "Restaurant, Plantain, Fried image"
+License: Pixabay Content License
+Page: https://pixabay.com/photos/restaurant-plantain-fried-food-5178433/
+
+grilled-chicken.jpg
+Source: Pexels, "Sliced grilled chicken topped with fresh herb chimichurri sauce on a decorative plate"
+Author: Alberto Guzman
+License: Pexels License
+Page: https://www.pexels.com/photo/grilled-chicken-with-fresh-herb-chimichurri-36954951/
+
+pasta.jpg
+Source: Unsplash, "pasta dish on white plate"
+Author: Eaters Collective
+License: Unsplash License
+Page: https://unsplash.com/photos/pasta-dish-on-white-plate-ddZYOtZUnBk
+
+pizza.jpg
+Source: Pexels, "Sliced Pizza on Plate"
+Author: Engin Akyurt
+License: Pexels License
+Page: https://www.pexels.com/photo/sliced-pizza-on-plate-845798/
+
+burger.jpg
+Source: Pexels, "A Burger on Wooden Plate"
+Author: Valeriya
+License: Pexels License
+Page: https://www.pexels.com/photo/a-burger-on-wooden-plate-11299732/
+
+dessert.jpg
+Source: Pexels, "Dessert on a Plate"
+Author: Valeriya
+License: Pexels License
+Page: https://www.pexels.com/photo/food-plate-restaurant-coffee-14748605/
+
+Foreign Bites linked images (not downloaded)
+
+foreign-bites-pizza
+Source: Pexels, "Delicious Pepperoni Pizza Slice with Melting Cheese"
+Author: Jonathan Valdes
+License: Pexels License
+Page: https://www.pexels.com/photo/delicious-pepperoni-pizza-slice-with-melting-cheese-35017349/
+Image link used in code: https://images.pexels.com/photos/35017349/pexels-photo-35017349.jpeg?auto=compress&cs=tinysrgb&w=1200
+
+foreign-bites-pasta
+Source: Pexels, "Macaroni With Tomato and Grilled Chicken"
+Author: Ameer Akhtar
+License: Pexels License
+Page: https://www.pexels.com/photo/macaroni-with-tomato-and-grilled-chicken-885468/
+Image link used in code: https://images.pexels.com/photos/885468/pexels-photo-885468.jpeg?auto=compress&cs=tinysrgb&w=1200
+
+foreign-bites-burger
+Source: Pexels, "Burger and French Fries Beside a Drink"
+Author: MARIANNE RIXHON
+License: Pexels License
+Page: https://www.pexels.com/photo/burger-and-french-fries-beside-a-drink-11812584/
+Image link used in code: https://images.pexels.com/photos/11812584/pexels-photo-11812584.jpeg?auto=compress&cs=tinysrgb&w=1200
+
+amala-ewedu.jpg
+Source: Wikimedia Commons, "Amala and ewedu with gbegiri soup.jpg"
+Author: Bukky658
+License: CC BY-SA 4.0
+Page: https://commons.wikimedia.org/wiki/File:Amala_and_ewedu_with_gbegiri_soup.jpg
+
+amala-ewedu-fresh.png
+Source: AI-generated image created for this project with OpenAI image generation
+License: Project asset
+
+suya-plate.png
+Source: AI-generated image created for this project with OpenAI image generation
+License: Project asset
+
+nkwobi-plate.png
+Source: AI-generated image created for this project with OpenAI image generation
+License: Project asset
+
+dodo-pepper-sauce.png
+Source: AI-generated image created for this project with OpenAI image generation
+License: Project asset
