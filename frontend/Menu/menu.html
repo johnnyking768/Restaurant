@@ -58,13 +58,15 @@
             pick what you want and let the kitchen handle the rest.
           </p>
 
-          <form class="search-panel">
+          <form class="search-panel" data-meal-search>
             <label>
               <span>Search Keywords</span>
-              <input type="search" placeholder="Jollof, chicken, pasta..." />
+              <input type="search" placeholder="Jollof, chicken, pasta..." data-search-input />
             </label>
             <button type="submit">Search</button>
           </form>
+
+          <section class="search-results" data-search-results hidden></section>
 
           <section class="quick-restaurants">
             <h2>Popular Picks</h2>

@@ -204,14 +204,18 @@
     });
   });
 
-  document.querySelectorAll(".dish-card button, .meal-card button, .dessert-card button, .add-cart").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      addToCart(createItemFromButton(button));
-      showAddedState(button);
-    });
-  });
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(".dish-card button, .meal-card button, .dessert-card button, .add-cart");
+
+    if (!button) {
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    addToCart(createItemFromButton(button));
+    showAddedState(button);
+  }, true);
 
   const menuButton = document.querySelector(".menu-button");
   const mobileNav = document.querySelector(".mobile-nav");
