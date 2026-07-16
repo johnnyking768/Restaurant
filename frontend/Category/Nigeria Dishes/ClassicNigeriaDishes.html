@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Classic Nigerian Dishes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ClassicNigeriaDishes.css" />
+</head>
+<body>
+  <main class="category-page">
+    <header class="topbar">
+      <a class="brand" href="../../Home/index.html"><span>The</span> Golden Plate</a>
+      <input class="nav-toggle" type="checkbox" id="classic-nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="classic-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </label>
+      <nav>
+        <a href="../../Home/index.html">Home</a>
+        <a href="../../Menu/menu.html">Menu</a>
+        <a href="../../Home/index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Naija Specials</p>
+        <h1>Classic Nigerian dishes, served rich and proper.</h1>
+        <p>Filter through rice plates, swallows, soups, street snacks and protein dishes built for real local flavour.</p>
+        <a href="#dishes">Explore Dishes</a>
+      </div>
+
+      <div class="hero-plate">
+        <img src="../../assets/images/amala-ewedu-fresh.png" alt="Amala with ewedu, gbegiri and assorted meat" />
+      </div>
+    </section>
+
+    <section class="dish-section" id="dishes">
+      <div class="section-heading">
+        <div>
+          <p>Customer Favourites</p>
+          <h2>Native plates with full flavour.</h2>
+        </div>
+
+        <label class="filter-control">
+          <span>Filter meals</span>
+          <select id="dish-filter" aria-label="Filter classic Nigerian dishes">
+            <option value="all">All Classic Dishes</option>
+            <option value="rice">Rice Dishes</option>
+            <option value="swallow">Swallows and Soup</option>
+            <option value="native">Native Delicacies</option>
+            <option value="street">Street Food and Snacks</option>
+            <option value="plantain">Plantain Specials</option>
+            <option value="protein">Native Protein Dishes</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card" data-category="swallow native" data-meal="amala-ewedu">
+          <img src="../../assets/images/amala-ewedu-fresh.png" alt="Amala and ewedu" />
+          <div>
+            <span>Swallows and Soup</span>
+            <h3>Amala & Ewedu</h3>
+            <p>Soft amala with ewedu, gbegiri, assorted beef and rich stew.</p>
+            <footer>
+              <strong>N6,500</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="swallow" data-meal="egusi-pounded-yam">
+          <img src="../../assets/images/egusi-soup.jpg" alt="Egusi soup" />
+          <div>
+            <span>Swallows and Soup</span>
+            <h3>Egusi & Pounded Yam</h3>
+            <p>Thick melon soup with assorted meat and smooth pounded yam.</p>
+            <footer>
+              <strong>N6,900</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="rice" data-meal="party-jollof">
+          <img src="../../assets/images/hero-jollof-premium.jpg" alt="Jollof rice combo" />
+          <div>
+            <span>Rice Dishes</span>
+            <h3>Party Jollof Rice</h3>
+            <p>Smoky jollof rice with grilled chicken, fish and pepper sauce.</p>
+            <footer>
+              <strong>N7,500</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="native protein" data-meal="nkwobi">
+          <img src="../../assets/images/nkwobi-plate.png" alt="Nkwobi style plate" />
+          <div>
+            <span>Native Delicacies</span>
+            <h3>Nkwobi Plate</h3>
+            <p>Spicy sauced meat with onions, peppers and local seasoning.</p>
+            <footer>
+              <strong>N7,200</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="native protein" data-meal="nkwobi">
+          <img src="../../assets/images/nkwobi-plate.png" alt="Nkwobi style plate" />
+          <div>
+            <span>Native Delicacies</span>
+            <h3>Nkwobi Plate</h3>
+            <p>Spicy sauced meat with onions, peppers and local seasoning.</p>
+            <footer>
+              <strong>N7,200</strong>
+              <button type="button">Add</button>
+            </footer> 
+            
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="native protein" data-meal="nkwobi">
+          <img src="../../assets/images/nkwobi-plate.png" alt="Nkwobi style plate" />
+          <div>
+            <span>Native Delicacies</span>
+            <h3>Nkwobi Plate</h3>
+            <p>Spicy sauced meat with onions, peppers and local seasoning.</p>
+            <footer>
+              <strong>N7,200</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="native protein" data-meal="nkwobi">
+          <img src="../../assets/images/nkwobi-plate.png" alt="Nkwobi style plate" />
+          <div>
+            <span>Native Delicacies</span>
+            <h3>Nkwobi Plate</h3>
+            <p>Spicy sauced meat with onions, peppers and local seasoning.</p>
+            <footer>
+              <strong>N7,200</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="street plantain" data-meal="dodo-pepper-sauce">
+          <img src="../../assets/images/dodo-pepper-sauce.png" alt="Fried plantain special" />
+          <div>
+            <span>Plantain Specials</span>
+            <h3>Dodo & Pepper Sauce</h3>
+            <p>Sweet fried plantain with hot pepper sauce and a chilled drink pairing.</p>
+            <footer>
+              <strong>N3,200</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+
+        <article class="dish-card" data-category="protein" data-meal="grilled-chicken">
+          <img src="../../assets/images/grilled-chicken.jpg" alt="Peppered chicken" />
+          <div>
+            <span>Native Protein Dishes</span>
+            <h3>Peppered Chicken</h3>
+            <p>Spicy grilled chicken tossed in pepper sauce with onions and herbs.</p>
+            <footer>
+              <strong>N6,800</strong>
+              <button type="button">Add</button>
+            </footer>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../nav.js"></script>
+  <script>
+    const dishFilter = document.querySelector("#dish-filter");
+    const dishCards = document.querySelectorAll(".dish-card");
+
+    dishFilter.addEventListener("change", () => {
+      const selectedCategory = dishFilter.value;
+
+      dishCards.forEach((card) => {
+        const categories = card.dataset.category.split(" ");
+        const shouldShow = selectedCategory === "all" || categories.includes(selectedCategory);
+        card.hidden = !shouldShow;
+      });
+    });
+
+    dishCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        window.location.href = `../../Meal/meal.html?meal=${card.dataset.meal}`;
+      });
+    });
+  </script>
+</body>
+</html>

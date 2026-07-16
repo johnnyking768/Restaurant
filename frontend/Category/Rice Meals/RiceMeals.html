@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Rice Meals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="RiceMeals.css" />
+</head>
+<body>
+  <main class="category-page">
+    <header class="topbar">
+      <a class="brand" href="../../Home/index.html"><span>The</span> Golden Plate</a>
+      <input class="nav-toggle" type="checkbox" id="rice-nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="rice-nav-toggle"><span></span><span></span><span></span><span class="sr-only">Menu</span></label>
+      <nav>
+        <a href="../../Home/index.html">Home</a>
+        <a class="active" href="../../Menu/menu.html">Menu</a>
+        <a href="../../Location/Location.html">Location</a>
+        <a href="../../Contact/Contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="category-hero">
+      <div class="hero-text">
+        <span class="mini-tag">Rice Meals</span>
+        <h1>Smoky rice bowls for proper hunger.</h1>
+        <p>Jollof, fried rice, coconut rice, ofada and stew bowls built around rich sauce, hot protein and Golden Plate spice.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#meals">Explore Rice</a>
+          <a class="ghost-btn" href="../../Menu/menu.html">Back to Menu</a>
+        </div>
+      </div>
+
+      <aside class="hero-board" aria-label="Rice meal highlights">
+        <div class="board-row"><span>01</span><div><strong>Party heat</strong><small>Smoky jollof cooked for that celebration taste.</small></div><em>Best seller</em></div>
+        <div class="board-row"><span>02</span><div><strong>Protein pairings</strong><small>Chicken, turkey, fish, prawns and beef stew options.</small></div><em>Fresh</em></div>
+        <div class="board-row"><span>03</span><div><strong>Lunch ready</strong><small>Fast bowls for office pickup and delivery.</small></div><em>25 min</em></div>
+      </aside>
+    </section>
+
+    <section class="meal-list" id="meals">
+      <div class="section-title"><span>Rice Picks</span><h2>Choose Your Bowl</h2></div>
+      <div class="cards">
+        <article class="meal-card" data-meal="party-jollof"><div class="card-img"><img src="../../assets/images/hero-jollof-premium.jpg" alt="Party jollof combo" /></div><div class="card-content"><small>Best Seller</small><h3>Party Jollof Combo</h3><p>Smoky jollof, grilled chicken, roasted fish and pepper sauce.</p><div class="card-bottom"><strong>N7,500</strong><button type="button">Order</button></div></div></article>
+        <article class="meal-card" data-meal="fried-rice-chicken"><div class="card-img"><img src="../../assets/images/jollof-rice.jpg" alt="Fried rice and chicken" /></div><div class="card-content"><small>Golden Rice</small><h3>Fried Rice & Chicken</h3><p>Vegetable fried rice with grilled chicken and a mild pepper dip.</p><div class="card-bottom"><strong>N6,400</strong><button type="button">Order</button></div></div></article>
+        <article class="meal-card" data-meal="coconut-rice-prawns"><div class="card-img"><img src="../../assets/images/hero-jollof.jpg" alt="Coconut rice with prawns" /></div><div class="card-content"><small>Coastal Bowl</small><h3>Coconut Rice & Prawns</h3><p>Creamy coconut rice with prawns, herbs and a light pepper finish.</p><div class="card-bottom"><strong>N7,000</strong><button type="button">Order</button></div></div></article>
+      </div>
+    </section>
+
+    <section class="combo-section">
+      <div class="combo-text"><span>Rice Combos</span><h2>Built for lunch breaks, family trays and owambe cravings.</h2><p>Pair rice with proteins, plantain, sauce and drinks when you want the plate to feel complete.</p></div>
+      <div class="combo-boxes">
+        <div class="combo-box"><h3>Jollof + Turkey</h3><p>Smoky jollof rice, peppered turkey and plantain.</p><strong>N7,900</strong></div>
+        <div class="combo-box"><h3>Rice, Beans & Stew</h3><p>White rice and honey beans with rich stew and plantain.</p><strong>N5,300</strong></div>
+        <div class="combo-box"><h3>Ofada Weekend Bowl</h3><p>Ofada rice, ayamase, egg and assorted beef.</p><strong>N7,300</strong></div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="feature-copy"><span>Kitchen Note</span><h2>Every rice order gets sauce checked before it leaves.</h2><p>We balance rice, protein and pepper sauce so every spoon tastes full, not dry.</p></div>
+      <div class="feature-list"><span>Extra plantain</span><span>Extra sauce</span><span>Swap protein</span><span>Family tray available</span></div>
+    </section>
+
+    <section class="final-cta"><span>Ready?</span><h2>Your rice bowl is waiting.</h2><a href="../../Menu/menu.html">Back To Full Menu</a></section>
+  </main>
+  <script src="../../nav.js"></script>
+  <script>
+    document.querySelectorAll(".meal-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        window.location.href = `../../Meal/meal.html?meal=${card.dataset.meal}`;
+      });
+    });
+  </script>
+</body>
+</html>

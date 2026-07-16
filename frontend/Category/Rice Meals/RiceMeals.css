@@ -1,0 +1,7 @@
+@import "../category-page.css";
+
+:root {
+  --accent: #d6a22d;
+  --accent-soft: rgba(214, 162, 45, 0.18);
+  --accent-deep: #98701f;
+}

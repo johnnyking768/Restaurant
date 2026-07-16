@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Foreign Bites</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="ForeignBites.css" />
+</head>
+
+<body>
+  <main class="foreign-page">
+    <header class="topbar">
+      <a class="brand" href="../../Home/index.html"><span>The</span> Golden Plate</a>
+      <input class="nav-toggle" type="checkbox" id="foreign-nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="foreign-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </label>
+      <nav>
+        <a href="../../Home/index.html">Home</a>
+        <a href="../../Menu/menu.html">Menu</a>
+        <a href="../../Home/index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="foreign-hero">
+      <div class="hero-text">
+        <span class="mini-tag">Pizza, Pasta & Burgers</span>
+        <h1>Global Cravings With A Golden Finish.</h1>
+        <p>
+          From cheesy pizza to creamy pasta and juicy burgers, enjoy comfort food with a bold Golden Plate touch.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#meals" class="primary-btn">Explore Bites</a>
+          <a href="#combo" class="ghost-btn">View Combos</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="circle-glow"></div>
+
+        <img
+          src="https://images.pexels.com/photos/35017349/pexels-photo-35017349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Loaded pizza"
+          decoding="async"
+        />
+
+        <div class="floating-card top-card">
+          <strong>Cheesy</strong>
+          <span>Loaded Pizza</span>
+        </div>
+
+        <div class="floating-card bottom-card">
+          <strong>Fresh</strong>
+          <span>Pasta & Burgers</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="meal-list" id="meals">
+      <div class="section-title">
+        <span>Golden Plate Picks</span>
+        <h2>Pick Your Foreign Bite</h2>
+        <div class="filter-control" aria-label="Filter foreign bites">
+          <span>Filter bites</span>
+          <div class="filter-tabs">
+            <button class="filter-btn active" type="button" data-filter="all">All Foreign Bites</button>
+            <button class="filter-btn" type="button" data-filter="pizza">Pizza</button>
+            <button class="filter-btn" type="button" data-filter="pasta">Pasta</button>
+            <button class="filter-btn" type="button" data-filter="burger">Burgers</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="meal-card active" data-category="pizza cheesy" data-meal="loaded-pizza">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/35017349/pexels-photo-35017349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Pizza slices"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="card-content">
+            <small>Cheesy</small>
+            <h3>Loaded Pizza</h3>
+            <p>Warm pizza slices with melted cheese, herbs and house sauce.</p>
+
+            <div class="card-bottom">
+              <strong>₦8,000</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="meal-card" data-category="pasta creamy" data-meal="pasta-bowl">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/885468/pexels-photo-885468.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Creamy pasta"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="card-content">
+            <small>Creamy</small>
+            <h3>Pasta Bowl</h3>
+            <p>Silky pasta tossed with sauce, greens and grilled chicken add-ons.</p>
+
+            <div class="card-bottom">
+              <strong>₦5,500</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="meal-card" data-category="burger combo" data-meal="burger-fries">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/11812584/pexels-photo-11812584.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Burger and fries"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="card-content">
+            <small>Combo</small>
+            <h3>Burger & Fries</h3>
+            <p>Stacked burger with crisp fries and a chilled drink option.</p>
+
+            <div class="card-bottom">
+              <strong>₦6,200</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="combo-section" id="combo">
+      <div class="combo-text">
+        <span>Foreign Combos</span>
+        <h2>Big bites for bigger cravings.</h2>
+        <p>
+          Choose meal combos made for lunch breaks, movie nights, hangouts and easy comfort cravings.
+        </p>
+      </div>
+
+      <div class="combo-boxes">
+        <div class="combo-box">
+          <h3>Pizza + Drink</h3>
+          <p>Loaded pizza slices served with a chilled soft drink.</p>
+          <strong>₦9,500</strong>
+        </div>
+
+        <div class="combo-box">
+          <h3>Pasta + Chicken</h3>
+          <p>Creamy pasta served with grilled chicken and extra sauce.</p>
+          <strong>₦7,200</strong>
+        </div>
+
+        <div class="combo-box">
+          <h3>Burger Feast</h3>
+          <p>Burger, fries, nuggets and a cold drink packed in one meal.</p>
+          <strong>₦10,000</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-section">
+      <div class="special-card">
+        <div>
+          <span>Today’s Special</span>
+          <h2>Double Cheese Burger</h2>
+          <p>
+            A juicy double-layer burger stacked with cheese, crisp lettuce, sauce and golden fries.
+          </p>
+
+          <a href="#meals">Order Special</a>
+        </div>
+
+        <img
+          src="https://images.pexels.com/photos/11812584/pexels-photo-11812584.jpeg?auto=compress&cs=tinysrgb&w=1400"
+          alt="Double cheese burger"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </section>
+
+    <section class="toppings-section">
+      <div class="section-title">
+        <span>Customize Your Bite</span>
+        <h2>Add Your Extras</h2>
+      </div>
+
+      <div class="toppings">
+        <span>Extra Cheese</span>
+        <span>Chicken Strips</span>
+        <span>Garlic Sauce</span>
+        <span>BBQ Sauce</span>
+        <span>Fries</span>
+        <span>Cold Drink</span>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <span>Hungry already?</span>
+      <h2>Your foreign bite is waiting for you.</h2>
+      <a href="../../Menu/menu.html">Back To Full Menu</a>
+    </section>
+  </main>
+  <script src="../../nav.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const mealCards = document.querySelectorAll(".meal-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        filterButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+
+        mealCards.forEach((card) => {
+          const categories = card.dataset.category.split(" ");
+          card.hidden = selectedFilter !== "all" && !categories.includes(selectedFilter);
+        });
+      });
+    });
+
+    mealCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        window.location.href = `../../Meal/meal.html?meal=${card.dataset.meal}`;
+      });
+    });
+  </script>
+</body>
+</html>

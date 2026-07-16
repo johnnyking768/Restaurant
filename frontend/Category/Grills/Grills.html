@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Grills</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="Grills.css" />
+</head>
+
+<body>
+  <main class="grill-page">
+    <header class="topbar">
+      <a class="brand" href="../../Home/index.html"><span>The</span> Golden Plate</a>
+      <input class="nav-toggle" type="checkbox" id="grill-nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="grill-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </label>
+      <nav>
+        <a href="../../Home/index.html">Home</a>
+        <a href="../../Menu/menu.html">Menu</a>
+        <a href="../../Home/index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="grill-hero">
+      <div class="hero-text">
+        <span class="mini-tag">Suya & Flame Grills</span>
+        <h1>Smoky Plates With Fire, Spice & Sauce.</h1>
+        <p>
+          Beef, chicken and fish grilled hot, brushed with sauce, finished with pepper, smoke and Golden Plate flavor.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#meals" class="primary-btn">Explore Grills</a>
+          <a href="#special" class="ghost-btn">View Special</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="circle-glow"></div>
+
+        <img src="../../assets/images/grilled-chicken.jpg" alt="Grilled chicken plate" />
+
+        <div class="flame-badge">🔥</div>
+
+        <div class="floating-card top-card">
+          <strong>Hot Grill</strong>
+          <span>Pepper Sauce</span>
+        </div>
+
+        <div class="floating-card bottom-card">
+          <strong>Smoky</strong>
+          <span>Fresh From Fire</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="meal-list" id="meals">
+      <div class="section-title">
+        <span>Fire-Grilled Picks</span>
+        <h2>Choose Your Hot Plate</h2>
+        <div class="filter-control" aria-label="Filter grilled plates">
+          <span>Filter grills</span>
+          <div class="filter-tabs">
+            <button class="filter-btn active" type="button" data-filter="all">All Grills</button>
+            <button class="filter-btn" type="button" data-filter="chicken">Chicken</button>
+            <button class="filter-btn" type="button" data-filter="suya">Suya</button>
+            <button class="filter-btn" type="button" data-filter="fish">Fish</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="meal-card active" data-category="chicken chef" data-meal="grilled-chicken">
+          <div class="card-img">
+            <img src="../../assets/images/grilled-chicken.jpg" alt="Grilled chicken plate" />
+          </div>
+
+          <div class="card-content">
+            <small>Chef Pick</small>
+            <h3>Grilled Chicken</h3>
+            <p>Juicy chicken with herbs, pepper sauce and a side of fries.</p>
+
+            <div class="card-bottom">
+              <strong>₦6,800</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="meal-card" data-category="suya beef" data-meal="beef-suya">
+          <div class="card-img">
+            <img src="../../assets/images/suya-plate.png" alt="Suya style beef plate" />
+          </div>
+
+          <div class="card-content">
+            <small>Suya Style</small>
+            <h3>Beef Suya Plate</h3>
+            <p>Spiced beef strips with onions, pepper mix and smoky seasoning.</p>
+
+            <div class="card-bottom">
+              <strong>₦5,800</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="meal-card active" data-category="fish spicy" data-meal="peppered-fish">
+          <div class="card-img">
+            <img src="../../assets/images/hero-jollof-premium.jpg" alt="Peppered fish plate" />
+          </div>
+
+          <div class="card-content">
+            <small>Hot Fish</small>
+            <h3>Peppered Fish</h3>
+            <p>Roasted fish with pepper sauce, onions and jollof rice pairing.</p>
+
+            <div class="card-bottom">
+              <strong>₦7,500</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="combo-section">
+      <div class="combo-text">
+        <span>Smoky Combos</span>
+        <h2>For people that want the full fire.</h2>
+        <p>
+          Bigger plates, richer spice and smoky sides for hangouts, lunch breaks and proper cravings.
+        </p>
+      </div>
+
+      <div class="combo-boxes">
+        <div class="combo-box">
+          <h3>Chicken + Fries</h3>
+          <p>Grilled chicken served with golden fries and pepper sauce.</p>
+          <strong>₦8,500</strong>
+        </div>
+
+        <div class="combo-box">
+          <h3>Suya + Jollof</h3>
+          <p>Spicy beef suya paired with smoky party jollof and onions.</p>
+          <strong>₦9,200</strong>
+        </div>
+
+        <div class="combo-box">
+          <h3>Fish Feast</h3>
+          <p>Peppered fish, jollof rice, plantain and chilled drink.</p>
+          <strong>₦12,000</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-section" id="special">
+      <div class="special-card">
+        <div>
+          <span>Today’s Fire Special</span>
+          <h2>Suya Chicken Platter</h2>
+          <p>
+            Spicy grilled chicken served with suya spice, onions, fries and our signature hot sauce.
+          </p>
+
+          <a href="#meals">Order Special</a>
+        </div>
+
+        <img src="../../assets/images/grilled-chicken.jpg" alt="Suya chicken platter" />
+      </div>
+    </section>
+
+    <section class="toppings-section">
+      <div class="section-title">
+        <span>Finish It Your Way</span>
+        <h2>Add Extra Heat</h2>
+      </div>
+
+      <div class="toppings">
+        <span>Extra Pepper</span>
+        <span>Suya Spice</span>
+        <span>BBQ Sauce</span>
+        <span>Grilled Plantain</span>
+        <span>Fries</span>
+        <span>Jollof Rice</span>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <span>Ready for fire?</span>
+      <h2>Your smoky grill plate is waiting.</h2>
+      <a href="../../Menu/menu.html">Back To </a>
+    </section>
+  </main>
+  <script src="../../nav.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const mealCards = document.querySelectorAll(".meal-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        filterButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+
+        mealCards.forEach((card) => {
+          const categories = card.dataset.category.split(" ");
+          card.hidden = selectedFilter !== "all" && !categories.includes(selectedFilter);
+        });
+      });
+    });
+
+    mealCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        window.location.href = `../../Meal/meal.html?meal=${card.dataset.meal}`;
+      });
+    });
+  </script>
+</body>
+</html>

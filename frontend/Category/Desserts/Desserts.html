@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Desserts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="Desserts.css" />
+</head>
+
+<body>
+  <main class="dessert-page">
+    <header class="topbar">
+      <a class="brand" href="../../Home/index.html"><span>The</span> Golden Plate</a>
+      <input class="nav-toggle" type="checkbox" id="dessert-nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="dessert-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </label>
+      <nav>
+        <a href="../../Home/index.html">Home</a>
+        <a href="../../Menu/menu.html">Menu</a>
+        <a href="../../Home/index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="dessert-hero">
+      <div class="hero-text">
+        <span class="mini-tag">Sweet Treats</span>
+        <h1>Luxury Desserts Made For Cravings.</h1>
+        <p>
+          Cakes, creamy shakes, cold desserts and sweet plates made to end your meal perfectly.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#desserts" class="primary-btn">Explore Desserts</a>
+          <a href="#special" class="ghost-btn">View Special</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="circle-glow"></div>
+
+        <img src="../../assets/images/dessert-hero-platter.png" alt="Luxury dessert platter" decoding="async" />
+
+        <div class="floating-card top-card">
+          <strong>Hot Pick</strong>
+          <span>Chocolate Lava</span>
+        </div>
+
+        <div class="floating-card bottom-card">
+          <strong>Fresh</strong>
+          <span>Cold & Creamy</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="dessert-list" id="desserts">
+      <div class="section-title">
+        <span>Chef’s Dessert Picks</span>
+        <h2>Pick Your Sweet Finish</h2>
+        <div class="filter-control" aria-label="Filter desserts">
+          <span>Filter desserts</span>
+          <div class="filter-tabs">
+            <button class="filter-btn active" type="button" data-filter="all">All Desserts</button>
+            <button class="filter-btn" type="button" data-filter="cake">Cakes</button>
+            <button class="filter-btn" type="button" data-filter="drink">Milkshakes</button>
+            <button class="filter-btn" type="button" data-filter="frozen">Frozen Treats</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="dessert-card" data-category="cake rich" data-meal="chocolate-cake">
+          <div class="card-img">
+            <img src="../../assets/images/dessert-chocolate-cake.png" alt="Chocolate cake" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="card-content">
+            <small>Rich & Soft</small>
+            <h3>Chocolate Cake</h3>
+            <p>Moist chocolate layers with creamy filling and smooth toppings.</p>
+
+            <div class="card-bottom">
+              <strong>₦4,500</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dessert-card active" data-category="drink cold" data-meal="vanilla-milkshake">
+          <div class="card-img">
+            <img src="../../assets/images/dessert-vanilla-milkshake.png" alt="Vanilla milkshake" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="card-content">
+            <small>Cold Drink</small>
+            <h3>Vanilla Milkshake</h3>
+            <p>Thick, smooth and chilled vanilla shake with creamy sweetness.</p>
+
+            <div class="card-bottom">
+              <strong>₦3,800</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dessert-card" data-category="frozen cold" data-meal="ice-cream-bowl">
+          <div class="card-img">
+            <img src="../../assets/images/dessert-ice-cream-bowl.png" alt="Ice cream bowl" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="card-content">
+            <small>Frozen Treat</small>
+            <h3>Ice Cream Bowl</h3>
+            <p>Sweet scoops served cold with syrup, toppings and wafers.</p>
+
+            <div class="card-bottom">
+              <strong>₦3,200</strong>
+              <button>Order</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="combo-section">
+      <div class="combo-text">
+        <span>Sweet Combos</span>
+        <h2>Make it extra special.</h2>
+        <p>
+          Pair your dessert with drinks, fruits, toppings and creamy extras for a full sweet experience.
+        </p>
+      </div>
+
+      <div class="combo-boxes">
+        <div class="combo-box">
+          <h3>Cake + Shake</h3>
+          <p>Chocolate cake served with a cold vanilla milkshake.</p>
+          <strong>₦7,500</strong>
+        </div>
+
+        <div class="combo-box">
+          <h3>Ice Cream + Waffles</h3>
+          <p>Soft waffles topped with ice cream and sweet syrup.</p>
+          <strong>₦6,800</strong>
+        </div>
+
+        <div class="combo-box">
+          <h3>Family Dessert Box</h3>
+          <p>A mix of cakes, brownies, cookies and chilled treats.</p>
+          <strong>₦15,000</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-section" id="special">
+      <div class="special-card">
+        <div>
+          <span>Today’s Special</span>
+          <h2>Strawberry Cream Cake</h2>
+          <p>
+            Fresh strawberry layers, soft sponge cake and whipped cream made for a sweet finish.
+          </p>
+
+          <a href="#desserts">Order Special</a>
+        </div>
+
+        <img src="../../assets/images/dessert-strawberry-cream-cake.png" alt="Strawberry cream cake" loading="lazy" decoding="async" />
+      </div>
+    </section>
+
+    <section class="toppings-section">
+      <div class="section-title">
+        <span>Customize Yours</span>
+        <h2>Add Your Favorite Toppings</h2>
+      </div>
+
+      <div class="toppings">
+        <span>Chocolate Drizzle</span>
+        <span>Caramel Sauce</span>
+        <span>Whipped Cream</span>
+        <span>Cookies</span>
+        <span>Sprinkles</span>
+        <span>Fresh Fruits</span>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <span>Still craving?</span>
+      <h2>Your sweet order is one click away.</h2>
+      <a href="../../Menu/menu.html">Back To Full Menu</a>
+    </section>
+  </main>
+  <script src="../../nav.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const dessertCards = document.querySelectorAll(".dessert-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        filterButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+
+        dessertCards.forEach((card) => {
+          const categories = card.dataset.category.split(" ");
+          card.hidden = selectedFilter !== "all" && !categories.includes(selectedFilter);
+        });
+      });
+    });
+
+    dessertCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        window.location.href = `../../Meal/meal.html?meal=${card.dataset.meal}`;
+      });
+    });
+  </script>
+</body>
+</html>
