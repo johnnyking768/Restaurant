@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Golden Plate | Meal Details</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
@@ -12,12 +13,12 @@
 <body>
   <main class="meal-page">
     <header class="navbar" aria-label="Primary navigation">
-      <a class="brand" href="../Home/home.html"><span>The</span> Golden Plate</a>
+      <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
       <nav class="nav-links">
-        <a href="../Home/home.html">Home</a>
+        <a href="../Home/index.html">Home</a>
         <a class="active" href="../Menu/menu.html">Menu</a>
         <a href="../Location/Location.html">Location</a>
-        <a href="../Home/home.html#contact">Contact</a>
+        <a href="../Home/index.html#contact">Contact</a>
       </nav>
       <div class="nav-actions">
         <button class="icon-button" type="button" aria-label="Search meals"><span></span></button>
@@ -33,11 +34,11 @@
           <span></span>
           <span></span>
         </button>
-        <a href="../Home/home.html">Home</a>
+        <a href="../Home/index.html">Home</a>
         <a class="active" href="../Menu/menu.html">Menu</a>
         
         <a href="../Location/Location.html">Location</a>
-        <a href="../Home/home.html#contact">Contact</a>
+        <a href="../Home/index.html#contact">Contact</a>
       </div>
     </nav>
 
@@ -62,6 +63,15 @@
             <span>Ready - 25 min</span>
           </div>
           <p class="meal-description" data-meal-description>Rich orange jollof rice served with grilled chicken, roasted fish, pepper sauce and a fresh onion garnish. Built for proper hunger, not small-small appetite.</p>
+          <section class="meal-customise" aria-label="Customise your meal">
+            <span>Make it yours</span>
+            <label>Spice level
+              <select data-spice-level>
+                <option>Mild</option><option selected>Medium</option><option>Hot</option>
+              </select>
+            </label>
+            <label class="cutlery-choice"><input type="checkbox" data-cutlery> Add cutlery</label>
+          </section>
         </div>
 
         <footer class="meal-actions">
@@ -79,6 +89,7 @@
       </section>
     </section>
   </main>
+  <script src="../meals-data.js"></script>
   <script src="../nav.js"></script>
   <script src="meal.js"></script>
 </body>

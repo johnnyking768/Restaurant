@@ -15,32 +15,42 @@
 <body>
   <main class="cart-page">
     <header class="navbar">
-      <a class="brand" href="../Home/home.html"><span>The</span> Golden Plate</a>
+      <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
 
       <nav class="nav-links">
-        <a href="../Home/home.html">Home</a>
+        <a href="../Home/index.html">Home</a>
         <a href="../Menu/menu.html">Menu</a>
         <a href="../Location/Location.html">Location</a>
         <a href="../Contact/Contact.html">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="icon-button" type="button"><span></span></button>
-        <button class="cart-button active" type="button"><span>0</span></button>
-        <button class="menu-button" type="button"><span></span><span></span></button>
+        <button class="icon-button" type="button" aria-label="Search meals"><span></span></button>
+        <button class="cart-button" type="button" aria-label="Open cart"><span>0</span></button>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
       </div>
     </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <button class="mobile-nav-backdrop" type="button" aria-label="Close navigation"></button>
+      <div class="mobile-nav-panel">
+        <button class="mobile-nav-close" type="button" aria-label="Close navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <a href="../Home/index.html">Home</a>
+        <a href="../Menu/menu.html">Menu</a>
+        <a href="../Location/Location.html">Location</a>
+        <a href="../Contact/Contact.html">Contact</a>
+        <a href="../Checkout/Checkout.html">Checkout</a>
+      </div>
+    </nav>
 
     <section class="cart-hero">
       <div>
         <p>Your Golden Basket</p>
-        <h1>Fresh meals ready for checkout.</h1>
-        <span>Review your order, adjust quantity, and complete your food experience.</span>
-      </div>
-
-      <div class="hero-badge">
-        <strong>Fast</strong>
-        <small>Hot delivery</small>
+        <h1>Review your order</h1>
+        <span>Adjust quantities, remove meals, or go back to the menu for more plates.</span>
       </div>
     </section>
 
@@ -67,9 +77,76 @@
           <strong>25 - 35 mins</strong>
         </div>
 
+        <div class="summary-card">
+          <div>
+            <span>Service Fee</span>
+            <strong data-summary-service>N0</strong>
+          </div>
+
+          <div>
+            <span>Delivery</span>
+            <strong data-summary-delivery>N0</strong>
+          </div>
+
+          <div class="grand-total">
+            <span>Grand Total</span>
+            <strong data-summary-grand>N0</strong>
+          </div>
+        </div>
+
         <a href="../Menu/menu.html">Add More Meals</a>
         <button type="button" data-checkout>Checkout Now</button>
       </aside>
+    </section>
+
+    <section class="cart-extras" aria-label="Order support">
+      <article>
+        <span>Delivery Note</span>
+        <h2>Hot plates, packed fresh</h2>
+        <p>Your food is prepared after checkout and sealed for delivery. Add address and phone details on the checkout page.</p>
+      </article>
+
+      <article>
+        <span>Payment</span>
+        <h2>Pay on delivery or transfer</h2>
+        <p>Choose your preferred payment method at checkout. Your basket stays saved while you confirm details.</p>
+      </article>
+
+      <article>
+        <span>Need help?</span>
+        <h2>Kitchen support is ready</h2>
+        <p>Call ahead for bulk meals, office lunch, family trays, or special instructions before dispatch.</p>
+      </article>
+    </section>
+
+    <section class="cart-suggestions" aria-label="Popular add-ons">
+      <div>
+        <p>Popular add-ons</p>
+        <h2>Complete your order</h2>
+      </div>
+
+      <div class="suggestion-grid">
+        <a href="../Meal/meal.html?meal=beans-plantain">
+          <img src="../assets/images/dodo-pepper-sauce.png" alt="Beans and plantain">
+          <span>Beans Special</span>
+          <strong>Beans & Plantain</strong>
+          <small>N4,200</small>
+        </a>
+
+        <a href="../Meal/meal.html?meal=small-chops-box">
+          <img src="../assets/images/dodo-pepper-sauce.png" alt="Small chops box">
+          <span>Party Box</span>
+          <strong>Small Chops Box</strong>
+          <small>N5,000</small>
+        </a>
+
+        <a href="../Meal/meal.html?meal=vanilla-milkshake">
+          <img src="../assets/images/dessert-vanilla-milkshake.png" alt="Vanilla milkshake">
+          <span>Cold Drink</span>
+          <strong>Vanilla Milkshake</strong>
+          <small>N3,800</small>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -79,8 +156,12 @@
     const cartItemsContainer = document.querySelector("[data-cart-items]");
     const summaryCount = document.querySelector("[data-summary-count]");
     const summaryTotal = document.querySelector("[data-summary-total]");
+    const summaryService = document.querySelector("[data-summary-service]");
+    const summaryDelivery = document.querySelector("[data-summary-delivery]");
+    const summaryGrand = document.querySelector("[data-summary-grand]");
     const checkoutButton = document.querySelector("[data-checkout]");
-    const cartBadge = document.querySelector(".cart-button span");
+    const SERVICE_FEE = 500;
+    const DELIVERY_FEE = 1200;
 
     function parsePrice(price) {
       return Number(String(price).replace(/[^0-9]/g, "")) || 0;
@@ -99,16 +180,20 @@
       const items = window.GoldenPlateCart.getItems();
       const itemCount = items.reduce((total, item) => total + item.quantity, 0);
       const total = items.reduce((sum, item) => sum + parsePrice(item.price) * item.quantity, 0);
+      const serviceFee = items.length ? SERVICE_FEE : 0;
+      const deliveryFee = items.length ? DELIVERY_FEE : 0;
 
       summaryCount.textContent = itemCount;
       summaryTotal.textContent = formatPrice(total);
-      cartBadge.textContent = itemCount;
+      summaryService.textContent = formatPrice(serviceFee);
+      summaryDelivery.textContent = formatPrice(deliveryFee);
+      summaryGrand.textContent = formatPrice(total + serviceFee + deliveryFee);
       checkoutButton.disabled = items.length === 0;
 
       if (items.length === 0) {
         cartItemsContainer.innerHTML = `
           <section class="empty-cart">
-            <div class="empty-icon">🍽️</div>
+            <div class="empty-icon"></div>
             <h2>Your plate is empty</h2>
             <p>Add something tasty from the menu and it will appear here.</p>
             <a href="../Menu/menu.html">Browse Menu</a>
@@ -164,10 +249,11 @@
     });
 
     checkoutButton.addEventListener("click", () => {
-      checkoutButton.textContent = "Order Confirmed";
-      setTimeout(() => {
-        checkoutButton.textContent = "Checkout Now";
-      }, 1400);
+      if (window.GoldenPlateCart.getItems().length === 0) {
+        return;
+      }
+
+      window.location.href = "../Checkout/Checkout.html";
     });
 
     renderCart();

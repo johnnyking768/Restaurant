@@ -1,5 +1,5 @@
 :root {
-  --gold: #ffbd08;
+  --gold: #c8952d;
   --ink: #070809;
   --paper: #f6f1e7;
   --white: #ffffff;
@@ -37,7 +37,7 @@ select {
   overflow: hidden;
   background:
     radial-gradient(circle at 15% 20%, rgba(255, 189, 8, 0.2), transparent 26%),
-    linear-gradient(135deg, #171b24 0%, #070809 58%, #ffbd08 58%);
+    linear-gradient(135deg, #171b24 0%, #070809 58%, #2f2818 58%);
 }
 
 .topbar {

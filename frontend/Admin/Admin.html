@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Plate | Admin Orders</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+  <main class="admin-page">
+    <aside class="admin-sidebar" aria-label="Admin navigation">
+      <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
+      <nav>
+        <a class="active" href="Admin.html">Orders</a>
+        <a href="../Menu/menu.html">Menu</a>
+        <a href="../Checkout/Checkout.html">Checkout</a>
+      </nav>
+      <div class="admin-support">
+        <span>Kitchen line</span>
+        <strong>0802 808 4696</strong>
+      </div>
+      <button class="logout-button" type="button" data-admin-logout>Logout</button>
+    </aside>
+
+    <section class="admin-workspace">
+      <header class="admin-topbar">
+        <div>
+          <p>Admin dashboard</p>
+          <h1>Order queue</h1>
+        </div>
+        <div class="admin-actions">
+          <button type="button" data-seed-orders>Load sample</button>
+          <button type="button" data-clear-orders>Clear closed</button>
+        </div>
+      </header>
+
+      <section class="stats-grid" aria-label="Order stats">
+        <article>
+          <span>Open</span>
+          <strong data-stat-open>0</strong>
+        </article>
+        <article>
+          <span>Pending payment</span>
+          <strong data-stat-payment>0</strong>
+        </article>
+        <article>
+          <span>Dispatch</span>
+          <strong data-stat-dispatch>0</strong>
+        </article>
+        <article>
+          <span>Today total</span>
+          <strong data-stat-total>N0</strong>
+        </article>
+      </section>
+
+      <section class="order-tools" aria-label="Order filters">
+        <label>
+          <span>Search</span>
+          <input type="search" placeholder="Customer, phone, order id..." data-order-search>
+        </label>
+        <label>
+          <span>Status</span>
+          <select data-status-filter>
+            <option value="all">All orders</option>
+            <option value="received">Received</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="preparing">Preparing</option>
+            <option value="on_the_way">On the way</option>
+            <option value="completed">Completed</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="orders-shell">
+        <div class="orders-list" data-orders-list></div>
+        <aside class="order-detail" data-order-detail>
+          <div class="empty-panel">
+            <span>No order selected</span>
+            <p>New checkout orders will appear here after a customer places an order in this browser.</p>
+          </div>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <script src="../api-config.js"></script>
+  <script src="Admin.js"></script>
+</body>
+</html>

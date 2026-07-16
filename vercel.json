@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/frontend/Home/index.html"
+    },
+    {
+      "source": "/menu",
+      "destination": "/frontend/Menu/menu.html"
+    },
+    {
+      "source": "/meal",
+      "destination": "/frontend/Meal/meal.html"
+    },
+    {
+      "source": "/cart",
+      "destination": "/frontend/Cart/cart.html"
+    },
+    {
+      "source": "/checkout",
+      "destination": "/frontend/Checkout/Checkout.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/frontend/Admin/Admin.html"
+    },
+    {
+      "source": "/admin-login",
+      "destination": "/frontend/Admin/Login.html"
+    },
+    {
+      "source": "/location",
+      "destination": "/frontend/Location/Location.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/frontend/Contact/Contact.html"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.svg"
+    }
+  ]
+}

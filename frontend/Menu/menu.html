@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Golden Plate | Menu</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,10 +20,10 @@
       <div class="hero-glow glow-b"></div>
 
       <header class="navbar">
-        <a class="brand" href="../Home/home.html"><span>The</span> Golden Plate</a>
+        <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
 
         <nav class="nav-links" aria-label="Primary navigation">
-          <a href="../Home/home.html">Home</a>
+          <a href="../Home/index.html">Home</a>
           <a class="active" href="menu.html">Menu</a>
           <a href="../Location/Location.html">Location</a>
           <a href="../Contact/Contact.html">Contact</a>
@@ -42,7 +43,7 @@
             <span></span>
             <span></span>
           </button>
-          <a href="../Home/home.html">Home</a>
+          <a href="../Home/index.html">Home</a>
           <a class="active" href="menu.html">Menu</a>
           <a href="../Location/Location.html">Location</a>
           <a href="../Contact/Contact.html">Contact</a>
@@ -52,7 +53,7 @@
       <div class="hero-grid">
         <section class="hero-copy">
           <p class="eyebrow">Easy way to order your food</p>
-          <h1>Order Fresh Naija Meals Any Time</h1>
+          <h1 data-text="Order Fresh Naija Meals Any Time">Order Fresh Naija Meals Any Time.</h1>
           <p class="hero-text">
             From party jollof and grilled chicken to pasta, pizza and sweet treats,
             pick what you want and let the kitchen handle the rest.
@@ -72,10 +73,21 @@
             <h2>Popular Picks</h2>
             <div>
               <span>Jollof</span>
+              <span>Rice</span>
+              <span>Beans</span>
               <span>Suya</span>
               <span>Chicken</span>
               <span>Pasta</span>
               <span>Pizza</span>
+              <span>All Meals</span>
+              <span class="pick-duplicate" aria-hidden="true">Jollof</span>
+              <span class="pick-duplicate" aria-hidden="true">Rice</span>
+              <span class="pick-duplicate" aria-hidden="true">Beans</span>
+              <span class="pick-duplicate" aria-hidden="true">Suya</span>
+              <span class="pick-duplicate" aria-hidden="true">Chicken</span>
+              <span class="pick-duplicate" aria-hidden="true">Pasta</span>
+              <span class="pick-duplicate" aria-hidden="true">Pizza</span>
+              <span class="pick-duplicate" aria-hidden="true">All Meals</span>
             </div>
           </section>
         </section>
@@ -84,7 +96,34 @@
           <div class="gold-orbit"></div>
           <div class="mini-badge one">Hot</div>
           <div class="mini-badge two">Fresh</div>
-          <img src="../assets/images/hero-jollof-premium.jpg" alt="Jollof rice with grilled chicken and roasted fish" />
+          <div class="hero-food-slider" aria-label="Featured meals carousel">
+            <div class="hero-food-track">
+              <a href="../Meal/meal.html?meal=party-jollof">
+                <img src="../assets/images/hero-jollof-premium.jpg" alt="Jollof rice with grilled chicken and roasted fish" />
+                <span>Party Jollof</span>
+              </a>
+              <a href="../Meal/meal.html?meal=beans-plantain">
+                <img src="../assets/images/dodo-pepper-sauce.png" alt="Beans and fried plantain" />
+                <span>Beans & Plantain</span>
+              </a>
+              <a href="../Meal/meal.html?meal=grilled-chicken">
+                <img src="../assets/images/grilled-chicken.jpg" alt="Grilled chicken plate" />
+                <span>Grilled Chicken</span>
+              </a>
+              <a href="../Meal/meal.html?meal=pasta-bowl">
+                <img src="../assets/images/pasta.jpg" alt="Creamy pasta bowl" />
+                <span>Creamy Pasta</span>
+              </a>
+              <a href="../Meal/meal.html?meal=party-jollof" aria-hidden="true" tabindex="-1">
+                <img src="../assets/images/hero-jollof-premium.jpg" alt="" />
+                <span>Party Jollof</span>
+              </a>
+              <a href="../Meal/meal.html?meal=beans-plantain" aria-hidden="true" tabindex="-1">
+                <img src="../assets/images/dodo-pepper-sauce.png" alt="" />
+                <span>Beans & Plantain</span>
+              </a>
+            </div>
+          </div>
         </section>
       </div>
     </section>
@@ -94,10 +133,10 @@
         <div class="spotlight-nav">
           <span>The Golden Plate</span>
           <div>
-            <a class="active" href="../Home/home.html">Home</a>
+            <a class="active" href="../Home/index.html">Home</a>
             <a href="#categories">Dishes</a>
             <a href="#popular">Popular</a>
-            <a href="../Home/home.html#contact">Contact</a>
+            <a href="../Contact/Contact.html">Contact</a>
           </div>
           <button type="button" aria-label="Open account">•</button>
         </div>
@@ -134,28 +173,28 @@
       <h2>Our Categories</h2>
 
       <div class="category-grid">
-        <a class="category-card" href="../Meal/meal.html?meal=party-jollof">
+        <a class="category-card" href="../Category/Rice Meals/RiceMeals.html">
           <img src="../assets/images/hero-jollof-premium.jpg" alt="Jollof rice" />
-          <h3>Jollof Rice</h3>
-          <p>18 meals available</p>
+          <h3>Rice Meals</h3>
+          <p>Jollof, fried rice, coconut rice, ofada and stew bowls</p>
         </a>
 
-        <a class="category-card" href="../Meal/meal.html?meal=grilled-chicken">
+        <a class="category-card" href="../Category/Chicken/Chicken.html">
           <img src="../assets/images/grilled-chicken.jpg" alt="Grilled chicken" />
           <h3>Chicken</h3>
-          <p>12 meals available</p>
+          <p>Steamed, fried and grilled chicken plates</p>
         </a>
 
-        <a class="category-card" href="../Meal/meal.html?meal=peppered-fish">
-          <img src="../assets/images/plantain-meal.jpg" alt="Plantain meal" />
+        <a class="category-card" href="../Category/Seafood/Seafood.html">
+          <img src="../assets/images/crab-seafood.png" alt="Crab seafood plate" />
           <h3>Seafood</h3>
-          <p>9 meals available</p>
+          <p>Fish, crab, prawns and pepper sauce</p>
         </a>
 
-        <a class="category-card" href="../Meal/meal.html?meal=pasta-bowl">
+        <a class="category-card" href="../Category/Pasta/Pasta.html">
           <img src="../assets/images/pasta.jpg" alt="Pasta plate" />
           <h3>Pasta</h3>
-          <p>10 meals available</p>
+          <p>Creamy, tomato and alfredo pasta bowls</p>
         </a>
 
         <a class="category-card text-card" href="../Category/Nigeria Dishes/ClassicNigeriaDishes.html">
@@ -230,6 +269,7 @@
       </div>
     </section>
   </main>
+  <script src="../meals-data.js"></script>
   <script src="../nav.js"></script>
   <script src="menu.js"></script>
 </body>

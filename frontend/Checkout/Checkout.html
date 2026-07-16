@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Plate | Checkout</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Checkout.css">
+</head>
+<body>
+  <main class="checkout-page">
+    <header class="navbar">
+      <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
+
+      <nav class="nav-links">
+        <a href="../Home/index.html">Home</a>
+        <a href="../Menu/menu.html">Menu</a>
+        <a href="../Location/Location.html">Location</a>
+        <a href="../Contact/Contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" type="button" aria-label="Search meals"><span></span></button>
+        <button class="cart-button" type="button" aria-label="Open cart"><span>0</span></button>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <button class="mobile-nav-backdrop" type="button" aria-label="Close navigation"></button>
+      <div class="mobile-nav-panel">
+        <button class="mobile-nav-close" type="button" aria-label="Close navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <a href="../Home/index.html">Home</a>
+        <a href="../Menu/menu.html">Menu</a>
+        <a href="../Location/Location.html">Location</a>
+        <a href="../Contact/Contact.html">Contact</a>
+        <a href="../Cart/cart.html">Cart</a>
+      </div>
+    </nav>
+
+    <section class="checkout-hero">
+      <p>Almost ready</p>
+      <h1>Confirm your order</h1>
+      <span>Add delivery details, choose payment, and send your meal request to the kitchen.</span>
+    </section>
+
+    <section class="checkout-layout">
+      <form class="checkout-form" data-checkout-form>
+        <section>
+          <p>Customer Details</p>
+          <div class="field-grid">
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+
+            <label>
+              <span>Phone number</span>
+              <input type="tel" name="phone" placeholder="+234..." required>
+            </label>
+
+            <label class="email-field">
+              <span>Email address</span>
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </label>
+          </div>
+
+          <label>
+            <span data-address-label>Delivery address</span>
+            <textarea name="address" rows="4" placeholder="Street, area, nearest landmark" required data-address-field></textarea>
+          </label>
+        </section>
+
+        <section>
+          <p>Delivery Method</p>
+          <div class="option-grid">
+            <label>
+              <input type="radio" name="delivery" value="delivery" checked>
+              <span>
+                <strong>Delivery</strong>
+                25 - 35 mins
+              </span>
+            </label>
+
+            <label>
+              <input type="radio" name="delivery" value="pickup">
+              <span>
+                <strong>Pickup</strong>
+                Ready in 20 mins
+              </span>
+            </label>
+          </div>
+
+          <div class="choice-panel" data-delivery-panel></div>
+        </section>
+
+        <section>
+          <p>Payment Method</p>
+          <div class="option-grid">
+            <label>
+              <input type="radio" name="payment" value="transfer" checked>
+              <span>
+                <strong>Bank transfer</strong>
+                Pay after confirmation
+              </span>
+            </label>
+
+            <label>
+              <input type="radio" name="payment" value="cash">
+              <span>
+                <strong>Pay on delivery</strong>
+                Cash or POS
+              </span>
+            </label>
+
+            <label>
+              <input type="radio" name="payment" value="paystack">
+              <span>
+                <strong>PayStack</strong>
+                Use my African bank card or mobile wallet
+              </span>
+            </label>
+          </div>
+
+          <div class="choice-panel" data-payment-panel></div>
+        </section>
+
+        <label>
+          <span>Extra note</span>
+          <textarea name="note" rows="3" placeholder="Less pepper, extra cutlery, call before arrival..."></textarea>
+        </label>
+
+        <button type="submit">Place Order</button>
+      </form>
+
+      <aside class="checkout-summary">
+        <p>Order Review</p>
+        <div class="checkout-items" data-checkout-items></div>
+
+        <div class="total-box">
+          <div>
+            <span>Subtotal</span>
+            <strong data-checkout-subtotal>N0</strong>
+          </div>
+          <div>
+            <span>Service Fee</span>
+            <strong data-checkout-service>N0</strong>
+          </div>
+          <div>
+            <span>Delivery</span>
+            <strong data-checkout-delivery>N0</strong>
+          </div>
+          <div class="grand-total">
+            <span>Total</span>
+            <strong data-checkout-grand>N0</strong>
+          </div>
+        </div>
+
+        <a href="../Cart/cart.html">Edit Basket</a>
+      </aside>
+    </section>
+
+    <section class="checkout-success" data-checkout-success hidden>
+      <div>
+        <span>Order received</span>
+        <h2>Your meal request is with the kitchen</h2>
+        <p>We will contact you shortly to confirm payment and delivery details.</p>
+        <div class="payment-proof" data-payment-proof hidden>
+          <strong>Proof of payment</strong>
+          <div class="proof-actions">
+            <a class="proof-link proof-email" href="mailto:ogbuefivictor076@gmail.com" aria-label="Email payment proof">
+              <span class="proof-icon" aria-hidden="true">M</span><span>Email proof</span>
+            </a>
+            <a class="proof-link proof-whatsapp" href="https://wa.me/2348028084696" target="_blank" rel="noopener" aria-label="Send payment proof on WhatsApp">
+              <span class="proof-icon" aria-hidden="true">☎</span><span>WhatsApp proof</span>
+            </a>
+          </div>
+        </div>
+        <div class="order-tracker" data-order-tracker hidden>
+          <strong>Your order status</strong>
+          <div><span class="is-current">1</span><span>2</span><span>3</span><span>4</span></div>
+          <p>Received <b>→</b> Confirmed <b>→</b> Preparing <b>→</b> On the way</p>
+        </div>
+        <a href="../Menu/menu.html">Order More Meals</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="../paystack-config.js"></script>
+  <script src="../api-config.js"></script>
+  <script src="../nav.js"></script>
+  <script>
+    const PAYSTACK_PUBLIC_KEY = window.GoldenPlatePaystack?.publicKey || "";
+    const BANK_DETAILS = {
+      bankName: "ACCESS BANK PLC",
+      accountName: "The Golden Plate",
+      accountNumber: "1953957317",
+      proofEmail: "ogbuefivictor076@gmail.com",
+      proofWhatsapp: "08028084696"
+    };
+
+    const checkoutItems = document.querySelector("[data-checkout-items]");
+    const subtotalNode = document.querySelector("[data-checkout-subtotal]");
+    const serviceNode = document.querySelector("[data-checkout-service]");
+    const deliveryNode = document.querySelector("[data-checkout-delivery]");
+    const grandNode = document.querySelector("[data-checkout-grand]");
+    const checkoutForm = document.querySelector("[data-checkout-form]");
+    const successMessage = document.querySelector("[data-checkout-success]");
+    const orderTracker = document.querySelector("[data-order-tracker]");
+    const paymentProof = document.querySelector("[data-payment-proof]");
+    const addressLabel = document.querySelector("[data-address-label]");
+    const addressField = document.querySelector("[data-address-field]");
+    const deliveryPanel = document.querySelector("[data-delivery-panel]");
+    const paymentPanel = document.querySelector("[data-payment-panel]");
+    const submitButton = checkoutForm.querySelector("button[type='submit']");
+    const SERVICE_FEE = 500;
+    const DELIVERY_FEE = 1200;
+    const ORDER_STORAGE_KEY = "goldenPlateOrders";
+    const LAST_ORDER_KEY = "goldenPlateLastOrderId";
+    const API_BASE = window.GoldenPlateApiBase || "http://localhost:4000/api";
+    const STATUS_STEPS = ["received", "confirmed", "preparing", "on_the_way"];
+    const STATUS_COPY = {
+      received: "We are processing your order. The kitchen has received it and will confirm shortly.",
+      confirmed: "Your order has been confirmed. The kitchen is getting ready to prepare it.",
+      preparing: "Your meal is being prepared now. We will update you before it leaves the kitchen.",
+      on_the_way: "Your order is on the way. Please keep your phone close for rider updates.",
+      completed: "Your order has been completed. Thank you for ordering from The Golden Plate."
+    };
+
+    function parsePrice(price) {
+      return Number(String(price).replace(/[^0-9]/g, "")) || 0;
+    }
+
+    function formatPrice(amount) {
+      return `N${amount.toLocaleString()}`;
+    }
+
+    function getSelectedDelivery() {
+      return checkoutForm.elements.delivery.value;
+    }
+
+    function getSelectedPayment() {
+      return checkoutForm.elements.payment.value;
+    }
+
+    function getOrderTotals() {
+      const items = window.GoldenPlateCart.getItems();
+      const subtotal = items.reduce((sum, item) => sum + parsePrice(item.price) * item.quantity, 0);
+      const service = items.length ? SERVICE_FEE : 0;
+      const delivery = items.length && getSelectedDelivery() === "delivery" ? DELIVERY_FEE : 0;
+      const total = subtotal + service + delivery;
+
+      return { items, subtotal, service, delivery, total };
+    }
+
+    function getSavedOrders() {
+      try {
+        return JSON.parse(localStorage.getItem(ORDER_STORAGE_KEY)) || [];
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function saveOrdersLocally(orders) {
+      localStorage.setItem(ORDER_STORAGE_KEY, JSON.stringify(orders));
+    }
+
+    async function apiRequest(path, options = {}) {
+      const response = await fetch(`${API_BASE}${path}`, {
+        headers: {
+          "Content-Type": "application/json",
+          ...options.headers
+        },
+        ...options
+      });
+
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.status}`);
+      }
+
+      return response.status === 204 ? null : response.json();
+    }
+
+    async function saveSubmittedOrder(order) {
+      let savedOrder = order;
+      try {
+        savedOrder = await apiRequest("/orders", {
+          method: "POST",
+          body: JSON.stringify(order)
+        });
+      } catch (error) {
+        savedOrder = order;
+      }
+
+      const orders = getSavedOrders();
+      const nextOrders = [savedOrder, ...orders.filter((item) => item.id !== savedOrder.id)];
+      saveOrdersLocally(nextOrders);
+      localStorage.setItem(LAST_ORDER_KEY, savedOrder.id);
+      return savedOrder;
+    }
+
+    function getLastOrder() {
+      const lastOrderId = localStorage.getItem(LAST_ORDER_KEY);
+      if (!lastOrderId) return null;
+      return getSavedOrders().find((order) => order.id === lastOrderId) || null;
+    }
+
+    async function getLatestLastOrder() {
+      const lastOrderId = localStorage.getItem(LAST_ORDER_KEY);
+      if (!lastOrderId) return null;
+
+      try {
+        const order = await apiRequest(`/orders/${lastOrderId}`);
+        const orders = getSavedOrders();
+        saveOrdersLocally([order, ...orders.filter((item) => item.id !== order.id)]);
+        return order;
+      } catch (error) {
+        return getLastOrder();
+      }
+    }
+
+    function createOrderRecord(formData, totals, paymentMethod, deliveryMethod) {
+      const orderId = `GP-${Date.now().toString().slice(-7)}`;
+      const now = new Date();
+
+      return {
+        id: orderId,
+        createdAt: now.toISOString(),
+        customer: {
+          name: formData.get("name") || "Golden Plate Customer",
+          phone: formData.get("phone") || "",
+          email: formData.get("email") || "",
+          address: formData.get("address") || ""
+        },
+        note: formData.get("note") || "",
+        deliveryMethod,
+        paymentMethod,
+        paymentStatus: paymentMethod === "cash" ? "collect_on_delivery" : "pending",
+        status: "received",
+        items: totals.items,
+        totals: {
+          subtotal: totals.subtotal,
+          service: totals.service,
+          delivery: totals.delivery,
+          total: totals.total
+        }
+      };
+    }
+
+    function renderChoicePanels() {
+      const deliveryMethod = getSelectedDelivery();
+      const paymentMethod = getSelectedPayment();
+
+      if (deliveryMethod === "delivery") {
+        addressLabel.textContent = "Delivery address";
+        addressField.placeholder = "Street, area, nearest landmark";
+        addressField.required = true;
+        deliveryPanel.innerHTML = `
+          <strong>Next step: dispatch rider confirmation</strong>
+          <p>Enter a clear address and nearest landmark. After you place the order, the kitchen confirms it, then a rider calls before leaving.</p>
+          <ul>
+            <li>Delivery fee is added to your total.</li>
+            <li>Keep your phone available for rider updates.</li>
+          </ul>
+        `;
+      } else {
+        addressLabel.textContent = "Pickup note";
+        addressField.placeholder = "Optional: preferred pickup time, name of person collecting...";
+        addressField.required = false;
+        deliveryPanel.innerHTML = `
+          <strong>Next step: pickup confirmation</strong>
+          <p>Your order will be packed for counter pickup. Come with your name and phone number once we confirm it is ready.</p>
+          <ul>
+            <li>No delivery fee will be charged.</li>
+            <li>Pickup window: about 20 minutes after confirmation.</li>
+          </ul>
+        `;
+      }
+
+      if (paymentMethod === "transfer") {
+        submitButton.textContent = "Send Order & Show Transfer Details";
+        paymentPanel.innerHTML = `
+          <strong>Bank transfer instructions</strong>
+          <p>After placing the order, transfer to this account, then send proof of payment by email or WhatsApp.</p>
+          <div class="bank-card">
+            <span>Bank</span><strong>${BANK_DETAILS.bankName}</strong>
+            <span>Account name</span><strong>${BANK_DETAILS.accountName}</strong>
+            <span>Account number</span><strong>${BANK_DETAILS.accountNumber}</strong>
+          </div>
+        `;
+      }
+
+      if (paymentMethod === "cash") {
+        submitButton.textContent = deliveryMethod === "pickup" ? "Confirm Pickup Order" : "Confirm Pay On Delivery";
+        paymentPanel.innerHTML = `
+          <strong>Pay on ${deliveryMethod === "pickup" ? "pickup" : "delivery"}</strong>
+          <p>You can pay with cash or POS when collecting your meal. Please keep the exact total or card ready.</p>
+          <ul>
+            <li>Order is still confirmed by phone before preparation.</li>
+            <li>Large orders may require a transfer deposit.</li>
+          </ul>
+        `;
+      }
+
+      if (paymentMethod === "paystack") {
+        const isConfigured = PAYSTACK_PUBLIC_KEY.startsWith("pk_test_") && !PAYSTACK_PUBLIC_KEY.includes("pk_test_9fd36c5c00120536c49b3ac0f3d28c3a41705696");
+        submitButton.textContent = isConfigured ? "Pay Securely With Paystack" : "Place Order - Add Paystack Key";
+        paymentPanel.innerHTML = `
+          <strong>Paystack card payment</strong>
+          <p>${isConfigured
+            ? "The secure Paystack popup will open when you place the order."
+            : "Add your Paystack test public key in paystack-config.js before testing card payments."}</p>
+        `;
+      }
+    }
+
+    function renderCheckout() {
+      const { items, subtotal, service, delivery, total } = getOrderTotals();
+
+      subtotalNode.textContent = formatPrice(subtotal);
+      serviceNode.textContent = formatPrice(service);
+      deliveryNode.textContent = delivery ? formatPrice(delivery) : "Pickup";
+      grandNode.textContent = formatPrice(total);
+
+      if (!items.length) {
+        checkoutItems.innerHTML = `
+          <div class="empty-checkout">
+            <h2>No meals yet</h2>
+            <p>Add meals to your cart before checkout.</p>
+            <a href="../Menu/menu.html">Browse Menu</a>
+          </div>
+        `;
+        submitButton.disabled = true;
+        return;
+      }
+
+      submitButton.disabled = false;
+
+      checkoutItems.innerHTML = items.map((item) => `
+        <article>
+          <img src="${item.image}" alt="${item.alt || item.title}">
+          <div>
+            <h2>${item.title}</h2>
+            <span>${item.quantity} x ${item.price}</span>
+          </div>
+          <strong>${formatPrice(parsePrice(item.price) * item.quantity)}</strong>
+        </article>
+      `).join("");
+    }
+
+    function getOrderStep(status) {
+      if (status === "completed") return STATUS_STEPS.length;
+      return Math.max(1, STATUS_STEPS.indexOf(status) + 1);
+    }
+
+    function updateOrderTracker(order) {
+      const currentStep = getOrderStep(order.status);
+      orderTracker.querySelectorAll("span").forEach((step, index) => {
+        const stepNumber = index + 1;
+        step.classList.toggle("is-current", stepNumber === currentStep);
+        step.classList.toggle("is-done", stepNumber < currentStep || order.status === "completed");
+      });
+    }
+
+    function showOrderFeedback(order, message = STATUS_COPY[order.status] || STATUS_COPY.received, showPaymentProof = false) {
+      successMessage.hidden = false;
+      orderTracker.hidden = false;
+      paymentProof.hidden = !(showPaymentProof || order.paymentMethod === "transfer");
+      successMessage.querySelector("h2").textContent = order.status === "completed"
+        ? "Your order is complete"
+        : "We are processing your order";
+      successMessage.querySelector("p").textContent = message;
+      updateOrderTracker(order);
+    }
+
+    async function refreshLastOrderFeedback(shouldScroll = false) {
+      const lastOrder = await getLatestLastOrder();
+      if (!lastOrder) return;
+      showOrderFeedback(lastOrder);
+      if (shouldScroll) {
+        successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    function completeOrder(order, message, allowMarkup = false, showPaymentProof = false) {
+      window.GoldenPlateCart.saveItems([]);
+      checkoutForm.reset();
+      renderChoicePanels();
+      renderCheckout();
+      showOrderFeedback(order, message, showPaymentProof);
+      if (allowMarkup) successMessage.querySelector("p").innerHTML = message;
+      successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function openPaystackPayment(customerName, phone, email, total, order) {
+      const isConfigured = PAYSTACK_PUBLIC_KEY.startsWith("pk_test_") && !PAYSTACK_PUBLIC_KEY.includes("REPLACE");
+
+      if (!isConfigured || !window.PaystackPop) {
+        alert("Add your Paystack test public key in frontend/paystack-config.js first.");
+        return;
+      }
+
+      const handler = window.PaystackPop.setup({
+        key: PAYSTACK_PUBLIC_KEY,
+        email,
+        amount: total * 100,
+        currency: "NGN",
+        ref: `GP-${Date.now()}`,
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Customer name",
+              variable_name: "customer_name",
+              value: customerName
+            },
+            {
+              display_name: "Phone number",
+              variable_name: "phone_number",
+              value: phone
+            }
+          ]
+        },
+        async callback() {
+          const savedOrder = await saveSubmittedOrder({
+            ...order,
+            status: "confirmed",
+            paymentStatus: "paid"
+          });
+          completeOrder(savedOrder, "Payment received through Paystack. Your meal request is now with the kitchen.");
+        },
+        onClose() {
+          alert("Paystack payment was closed. Your basket is still saved.");
+        }
+      });
+
+      handler.openIframe();
+    }
+
+    checkoutForm.addEventListener("change", (event) => {
+      if (!event.target.matches("input[name='delivery'], input[name='payment']")) {
+        return;
+      }
+
+      renderChoicePanels();
+      renderCheckout();
+    });
+
+    checkoutForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const totals = getOrderTotals();
+      const formData = new FormData(checkoutForm);
+      const paymentMethod = getSelectedPayment();
+      const deliveryMethod = getSelectedDelivery();
+      const order = createOrderRecord(formData, totals, paymentMethod, deliveryMethod);
+
+      if (!totals.items.length) {
+        return;
+      }
+
+      if (paymentMethod === "paystack") {
+        openPaystackPayment(
+          formData.get("name") || "Golden Plate Customer",
+          formData.get("phone") || "",
+          formData.get("email") || "",
+          totals.total,
+          order
+        );
+        return;
+      }
+
+      if (paymentMethod === "transfer") {
+        const savedOrder = await saveSubmittedOrder(order);
+        completeOrder(
+          savedOrder,
+          `Order received. Transfer ${formatPrice(totals.total)} to ${BANK_DETAILS.accountName} - ${BANK_DETAILS.accountNumber} (${BANK_DETAILS.bankName}).`,
+          true,
+          true
+        );
+        return;
+      }
+
+      const savedOrder = await saveSubmittedOrder(order);
+      completeOrder(savedOrder, deliveryMethod === "pickup"
+        ? "Pickup order received. We will call you when your meal is ready at the counter."
+        : "Delivery order received. Please keep your phone available for rider confirmation.");
+    });
+
+    renderChoicePanels();
+    renderCheckout();
+    refreshLastOrderFeedback(true);
+    window.addEventListener("storage", (event) => {
+      if (event.key === ORDER_STORAGE_KEY) {
+        refreshLastOrderFeedback();
+      }
+    });
+    window.addEventListener("focus", () => refreshLastOrderFeedback());
+    setInterval(() => refreshLastOrderFeedback(), 5000);
+  </script>
+</body>
+</html>

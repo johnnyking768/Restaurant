@@ -292,6 +292,14 @@
   box-shadow: 0 18px 45px rgba(17, 19, 24, 0.08);
 }
 
+.faq-list article:hover {
+  transform: translatex(6px);
+  box-shadow:
+    0 30px 70px rgba(17, 19, 24, 0.14),
+    0 0 38px rgba(255, 189, 8, 0.16);
+    transition: 0.40s ease;
+}
+
 .faq-list h3 {
   margin: 0;
   font-size: 22px;

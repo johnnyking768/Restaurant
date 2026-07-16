@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Plate | Chicken</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Chicken.css" />
+</head>
+<body>
+  <main class="category-page">
+    <header class="topbar">
+      <a class="brand" href="../../Home/index.html"><span>The</span> Golden Plate</a>
+      <input class="nav-toggle" type="checkbox" id="chicken-nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="chicken-nav-toggle"><span></span><span></span><span></span><span class="sr-only">Menu</span></label>
+      <nav><a href="../../Home/index.html">Home</a><a class="active" href="../../Menu/menu.html">Menu</a><a href="../../Location/Location.html">Location</a><a href="../../Contact/Contact.html">Contact</a></nav>
+    </header>
+
+    <section class="category-hero">
+      <div class="hero-text">
+        <span class="mini-tag">Chicken Plates</span>
+        <h1>Steamed, fried and grilled chicken plates.</h1>
+        <p>This page is chicken only: soft steamed chicken, crispy fried chicken and smoky grilled chicken with pepper sauce.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#meals">Explore Chicken</a><a class="ghost-btn" href="../../Menu/menu.html">Back to Menu</a></div>
+      </div>
+      <aside class="hero-board" aria-label="Chicken highlights">
+        <div class="board-row"><span>01</span><div><strong>Steamed</strong><small>Tender chicken cooked soft with herbs and light pepper sauce.</small></div><em>Soft</em></div>
+        <div class="board-row"><span>02</span><div><strong>Fried</strong><small>Crispy golden chicken with a hot pepper dip.</small></div><em>Crisp</em></div>
+        <div class="board-row"><span>03</span><div><strong>Grilled</strong><small>Flame-grilled chicken with smoky edges and house spice.</small></div><em>Smoky</em></div>
+      </aside>
+    </section>
+
+    <section class="meal-list" id="meals">
+      <div class="section-title"><span>Chicken Picks</span><h2>Choose Your Plate</h2></div>
+      <div class="cards">
+        <article class="meal-card" data-meal="steamed-chicken"><div class="card-img"><img src="../../assets/images/steamed-chicken.png" alt="Steamed chicken plate" /></div><div class="card-content"><small>Soft & Juicy</small><h3>Steamed Chicken</h3><p>Tender steamed chicken with herbs, light spice and pepper sauce.</p><div class="card-bottom"><strong>N6,200</strong><button type="button">Order</button></div></div></article>
+        <article class="meal-card" data-meal="fried-chicken"><div class="card-img"><img src="../../assets/images/fried-chicken.png" alt="Crispy fried chicken plate" /></div><div class="card-content"><small>Crispy</small><h3>Fried Chicken</h3><p>Golden fried chicken pieces with crisp skin and a spicy dip.</p><div class="card-bottom"><strong>N6,500</strong><button type="button">Order</button></div></div></article>
+        <article class="meal-card" data-meal="grilled-chicken"><div class="card-img"><img src="../../assets/images/grilled-chicken.jpg" alt="Grilled chicken plate" /></div><div class="card-content"><small>Smoky</small><h3>Grilled Chicken</h3><p>Juicy flame-grilled chicken with herbs and pepper sauce.</p><div class="card-bottom"><strong>N6,800</strong><button type="button">Order</button></div></div></article>
+      </div>
+    </section>
+
+    <section class="combo-section">
+      <div class="combo-text"><span>Chicken Styles</span><h2>Pick the texture you want.</h2><p>Soft and juicy, crisp and golden, or smoky from the grill. Same category, different mood.</p></div>
+      <div class="combo-boxes"><div class="combo-box"><h3>Steamed</h3><p>Best when you want tender chicken with a lighter finish.</p><strong>N6,200</strong></div><div class="combo-box"><h3>Fried</h3><p>Best when you want crunchy skin and pepper dip.</p><strong>N6,500</strong></div><div class="combo-box"><h3>Grilled</h3><p>Best when you want smoke, herbs and charred edges.</p><strong>N6,800</strong></div></div>
+    </section>
+
+    <section class="feature-section"><div class="feature-copy"><span>Kitchen Note</span><h2>Chicken is packed last so it stays juicy.</h2><p>Each chicken style is finished close to dispatch so the texture stays right.</p></div><div class="feature-list"><span>Extra pepper</span><span>Herb finish</span><span>Hot sauce</span><span>Extra chicken</span></div></section>
+    <section class="final-cta"><span>Hungry?</span><h2>Your chicken plate is one click away.</h2><a href="../../Menu/menu.html">Back To Full Menu</a></section>
+  </main>
+  <script src="../../nav.js"></script>
+  <script>document.querySelectorAll(".meal-card").forEach((card)=>{card.addEventListener("click",()=>{window.location.href=`../../Meal/meal.html?meal=${card.dataset.meal}`;});});</script>
+</body>
+</html>

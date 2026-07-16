@@ -1,0 +1,46 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Home/index.html"
+    },
+    {
+      "source": "/menu",
+      "destination": "/Menu/menu.html"
+    },
+    {
+      "source": "/meal",
+      "destination": "/Meal/meal.html"
+    },
+    {
+      "source": "/cart",
+      "destination": "/Cart/cart.html"
+    },
+    {
+      "source": "/checkout",
+      "destination": "/Checkout/Checkout.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/Admin/Admin.html"
+    },
+    {
+      "source": "/admin-login",
+      "destination": "/Admin/Login.html"
+    },
+    {
+      "source": "/location",
+      "destination": "/Location/Location.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/Contact/Contact.html"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.svg"
+    }
+  ]
+}

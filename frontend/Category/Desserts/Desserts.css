@@ -1,5 +1,5 @@
 :root {
-  --gold: #ffbd08;
+  --gold: #c8952d;
   --gold-soft: #ffd45c;
   --dark: #070809;
   --dark-2: #111722;
@@ -338,7 +338,7 @@ a {
   content: "";
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, transparent, rgba(255, 189, 8, 0.65), transparent);
+  background: linear-gradient(135deg, transparent, rgba(200, 149, 45, 0.34), transparent);
   opacity: 0;
   transition: 0.45s ease-in-out;
   z-index: -1;
