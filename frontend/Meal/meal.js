@@ -408,8 +408,8 @@ const meals = {
   }
 };
 
-if (window.GoldenPlateExtraMealDetails) {
-  Object.assign(meals, window.GoldenPlateExtraMealDetails);
+if (window.DupzExtraMealDetails) {
+  Object.assign(meals, window.DupzExtraMealDetails);
 }
 
 function getMealId() {
@@ -432,7 +432,7 @@ function renderMeal(mealId) {
   const description = document.querySelector("[data-meal-description]");
   const relatedMeals = document.querySelector("[data-related-meals]");
 
-  document.title = `The Golden Plate | ${meal.title}`;
+  document.title = `Dupz | ${meal.title}`;
   image.src = meal.image;
   image.alt = meal.alt;
   title.textContent = meal.title;

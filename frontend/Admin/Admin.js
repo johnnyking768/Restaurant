@@ -1,6 +1,6 @@
-const ORDER_STORAGE_KEY = "goldenPlateOrders";
-const TOKEN_KEY = "goldenPlateAdminToken";
-const API_BASE = window.GoldenPlateApiBase || "http://localhost:4000/api";
+const ORDER_STORAGE_KEY = "dupzOrders";
+const TOKEN_KEY = "dupzAdminToken";
+const API_BASE = window.DupzApiBase || "http://localhost:4000/api";
 const adminToken = sessionStorage.getItem(TOKEN_KEY);
 
 if (!adminToken) {

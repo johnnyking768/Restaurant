@@ -350,8 +350,8 @@ const searchableMeals = [
   }
 ];
 
-if (Array.isArray(window.GoldenPlateExtraMeals)) {
-  searchableMeals.push(...window.GoldenPlateExtraMeals);
+if (Array.isArray(window.DupzExtraMeals)) {
+  searchableMeals.push(...window.DupzExtraMeals);
 }
 
 spotlightMeals.forEach((meal) => {

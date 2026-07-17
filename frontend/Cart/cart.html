@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Golden Plate | Cart</title>
+  <title>Dupz | Cart</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
 <body>
   <main class="cart-page">
     <header class="navbar">
-      <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
+      <a class="brand" href="../Home/index.html">Dupz</a>
 
       <nav class="nav-links">
         <a href="../Home/index.html">Home</a>
@@ -172,12 +172,12 @@
     }
 
     function saveItems(items) {
-      window.GoldenPlateCart.saveItems(items);
+      window.DupzCart.saveItems(items);
       renderCart();
     }
 
     function renderCart() {
-      const items = window.GoldenPlateCart.getItems();
+      const items = window.DupzCart.getItems();
       const itemCount = items.reduce((total, item) => total + item.quantity, 0);
       const total = items.reduce((sum, item) => sum + parsePrice(item.price) * item.quantity, 0);
       const serviceFee = items.length ? SERVICE_FEE : 0;
@@ -207,7 +207,7 @@
           <img src="${item.image}" alt="${item.alt || item.title}" />
 
           <div class="item-copy">
-            <span>Golden Plate Meal</span>
+            <span>Dupz Meal</span>
             <h2>${item.title}</h2>
             <p>${item.price}</p>
           </div>
@@ -233,7 +233,7 @@
       if (!action) return;
 
       const itemId = event.target.closest("[data-cart-id]").dataset.cartId;
-      const items = window.GoldenPlateCart.getItems();
+      const items = window.DupzCart.getItems();
       const item = items.find((cartItem) => cartItem.id === itemId);
 
       if (!item) return;
@@ -249,7 +249,7 @@
     });
 
     checkoutButton.addEventListener("click", () => {
-      if (window.GoldenPlateCart.getItems().length === 0) {
+      if (window.DupzCart.getItems().length === 0) {
         return;
       }
 

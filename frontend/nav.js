@@ -1,6 +1,6 @@
 (function () {
-  const CART_STORAGE_KEY = "goldenPlateCartCount";
-  const CART_ITEMS_KEY = "goldenPlateCartItems";
+  const CART_STORAGE_KEY = "dupzCartCount";
+  const CART_ITEMS_KEY = "dupzCartItems";
 
   if (!document.querySelector(".whatsapp-help")) {
     const whatsappHelp = document.createElement("a");
@@ -8,7 +8,7 @@
     whatsappHelp.href = "https://wa.me/2348028084696?text=Hello%20Golden%20Plate%2C%20I%20need%20help%20with%20my%20order.";
     whatsappHelp.target = "_blank";
     whatsappHelp.rel = "noopener";
-    whatsappHelp.setAttribute("aria-label", "Chat with Golden Plate on WhatsApp");
+    whatsappHelp.setAttribute("aria-label", "Chat with Dupz on WhatsApp");
     whatsappHelp.innerHTML = '<span aria-hidden="true">⌕</span><strong>Need help?</strong>';
     document.body.append(whatsappHelp);
     document.body.classList.toggle("has-social-rail", Boolean(document.querySelector(".social-rail")));
@@ -459,8 +459,8 @@
     }
   };
 
-  if (window.GoldenPlateExtraMealDetails) {
-    Object.assign(fallbackMeals, window.GoldenPlateExtraMealDetails);
+  if (window.DupzExtraMealDetails) {
+    Object.assign(fallbackMeals, window.DupzExtraMealDetails);
   }
 
   function getCartUrl() {
@@ -547,7 +547,7 @@
       || card?.querySelector("h3")?.textContent.trim()
       || document.querySelector("[data-meal-title]")?.textContent.trim()
       || fallbackMeal.title
-      || "Golden Plate Meal";
+      || "Dupz Meal";
     const price = card?.querySelector("strong")?.textContent.trim()
       || document.querySelector("[data-meal-price]")?.textContent.trim()
       || fallbackMeal.price
@@ -574,7 +574,7 @@
   function addToCart(itemOrQuantity = 1) {
     const item = typeof itemOrQuantity === "object"
       ? itemOrQuantity
-      : { title: "Golden Plate Meal", price: "N0", quantity: itemOrQuantity };
+      : { title: "Dupz Meal", price: "N0", quantity: itemOrQuantity };
     const normalizedItem = {
       ...item,
       image: item.image ? resolveAssetUrl(item.image) : ""
@@ -604,7 +604,7 @@
     }, 900);
   }
 
-  window.GoldenPlateCart = {
+  window.DupzCart = {
     addItem: addToCart,
     getItems: getCartItems,
     getCount: getCartCount,

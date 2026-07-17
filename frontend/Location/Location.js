@@ -12,7 +12,7 @@
     return;
   }
 
-  const destination = "12 Golden Plate Avenue Victoria Island Lagos";
+  const destination = "12 Dupz Avenue Victoria Island Lagos";
   const mapScales = [1, 1.16, 1.34, 1.54, 1.78];
   let activeScale = 0;
 

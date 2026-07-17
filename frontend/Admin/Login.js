@@ -1,5 +1,5 @@
-const API_BASE = window.GoldenPlateApiBase || "http://localhost:4000/api";
-const TOKEN_KEY = "goldenPlateAdminToken";
+const API_BASE = window.DupzApiBase || "http://localhost:4000/api";
+const TOKEN_KEY = "dupzAdminToken";
 const loginForm = document.querySelector("[data-admin-login]");
 const errorNode = document.querySelector("[data-login-error]");
 

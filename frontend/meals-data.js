@@ -432,8 +432,8 @@
     }
   ];
 
-  window.GoldenPlateExtraMeals = meals;
-  window.GoldenPlateExtraMealDetails = meals.reduce((details, meal) => {
+  window.DupzExtraMeals = meals;
+  window.DupzExtraMealDetails = meals.reduce((details, meal) => {
     details[meal.id] = {
       title: meal.title,
       kicker: meal.tag,

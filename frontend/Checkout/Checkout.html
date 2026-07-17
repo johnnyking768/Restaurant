@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Golden Plate | Checkout</title>
+  <title>Dupz | Checkout</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
   <main class="checkout-page">
     <header class="navbar">
-      <a class="brand" href="../Home/index.html"><span>The</span> Golden Plate</a>
+      <a class="brand" href="../Home/index.html">Dupz</a>
 
       <nav class="nav-links">
         <a href="../Home/index.html">Home</a>
@@ -198,10 +198,10 @@
   <script src="../api-config.js"></script>
   <script src="../nav.js"></script>
   <script>
-    const PAYSTACK_PUBLIC_KEY = window.GoldenPlatePaystack?.publicKey || "";
+    const PAYSTACK_PUBLIC_KEY = window.DupzPaystack?.publicKey || "";
     const BANK_DETAILS = {
       bankName: "ACCESS BANK PLC",
-      accountName: "The Golden Plate",
+      accountName: "Dupz",
       accountNumber: "1953957317",
       proofEmail: "ogbuefivictor076@gmail.com",
       proofWhatsapp: "08028084696"
@@ -223,16 +223,16 @@
     const submitButton = checkoutForm.querySelector("button[type='submit']");
     const SERVICE_FEE = 500;
     const DELIVERY_FEE = 1200;
-    const ORDER_STORAGE_KEY = "goldenPlateOrders";
-    const LAST_ORDER_KEY = "goldenPlateLastOrderId";
-    const API_BASE = window.GoldenPlateApiBase || "http://localhost:4000/api";
+    const ORDER_STORAGE_KEY = "dupzOrders";
+    const LAST_ORDER_KEY = "dupzLastOrderId";
+    const API_BASE = window.DupzApiBase || "http://localhost:4000/api";
     const STATUS_STEPS = ["received", "confirmed", "preparing", "on_the_way"];
     const STATUS_COPY = {
       received: "We are processing your order. The kitchen has received it and will confirm shortly.",
       confirmed: "Your order has been confirmed. The kitchen is getting ready to prepare it.",
       preparing: "Your meal is being prepared now. We will update you before it leaves the kitchen.",
       on_the_way: "Your order is on the way. Please keep your phone close for rider updates.",
-      completed: "Your order has been completed. Thank you for ordering from The Golden Plate."
+      completed: "Your order has been completed. Thank you for ordering from Dupz."
     };
 
     function parsePrice(price) {
@@ -252,7 +252,7 @@
     }
 
     function getOrderTotals() {
-      const items = window.GoldenPlateCart.getItems();
+      const items = window.DupzCart.getItems();
       const subtotal = items.reduce((sum, item) => sum + parsePrice(item.price) * item.quantity, 0);
       const service = items.length ? SERVICE_FEE : 0;
       const delivery = items.length && getSelectedDelivery() === "delivery" ? DELIVERY_FEE : 0;
@@ -335,7 +335,7 @@
         id: orderId,
         createdAt: now.toISOString(),
         customer: {
-          name: formData.get("name") || "Golden Plate Customer",
+          name: formData.get("name") || "Dupz Customer",
           phone: formData.get("phone") || "",
           email: formData.get("email") || "",
           address: formData.get("address") || ""
@@ -491,7 +491,7 @@
     }
 
     function completeOrder(order, message, allowMarkup = false, showPaymentProof = false) {
-      window.GoldenPlateCart.saveItems([]);
+      window.DupzCart.saveItems([]);
       checkoutForm.reset();
       renderChoicePanels();
       renderCheckout();
@@ -568,7 +568,7 @@
 
       if (paymentMethod === "paystack") {
         openPaystackPayment(
-          formData.get("name") || "Golden Plate Customer",
+          formData.get("name") || "Dupz Customer",
           formData.get("phone") || "",
           formData.get("email") || "",
           totals.total,

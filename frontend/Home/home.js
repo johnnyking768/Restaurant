@@ -2,7 +2,7 @@ const featuredButton = document.querySelector("[data-add-featured]");
 
 if (featuredButton) {
   featuredButton.addEventListener("click", () => {
-    window.GoldenPlateCart.addItem({
+    window.DupzCart.addItem({
       id: "party-jollof",
       title: "Party Jollof Combo",
       price: "N7,500",

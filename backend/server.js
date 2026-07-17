@@ -39,7 +39,7 @@ async function start() {
   await mongoose.connect(process.env.MONGODB_URI);
   console.log("MongoDB connected");
   app.listen(port, () => {
-    console.log(`Golden Plate API running on http://localhost:${port}`);
+    console.log(`Dupz API running on http://localhost:${port}`);
   });
 }
 
