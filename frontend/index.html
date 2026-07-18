@@ -1,14 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=Home/index.html">
-  <title>Dupz</title>
-  <link rel="canonical" href="Home/index.html">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dupz | Nigerian Restaurant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="Home/index.css" />
 </head>
+
 <body>
-  <p><a href="Home/index.html">Open Dupz</a></p>
+  <main class="page-shell">
+    <section class="hero" id="home">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+      <div class="gold-panel"></div>
+      <div class="gold-arc top-arc"></div>
+      <div class="gold-arc bottom-arc"></div>
+
+      <header class="navbar">
+        <a class="brand" href="#home">
+          Dupz
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a class="active" href="#home">Home</a>
+          <a href="Menu/menu.html">Menu</a>
+          <a href="Location/Location.html">Location</a>
+          <a href="Contact/Contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" type="button" aria-label="Search meals">
+            <span></span>
+          </button>
+
+          <button class="cart-button" type="button" aria-label="Open cart">
+            <span class="cart-dot" data-cart-count>0</span>
+          </button>
+
+          <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+        <button class="mobile-nav-backdrop" type="button" aria-label="Close navigation"></button>
+        <div class="mobile-nav-panel">
+          <button class="mobile-nav-close" type="button" aria-label="Close navigation">
+            <span></span>
+            <span></span>
+          </button>
+          <a class="active" href="#home">Home</a>
+          <a href="Menu/menu.html">Menu</a>
+          <a href="Location/Location.html">Location</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <section class="hero-copy">
+          <p class="eyebrow">Are You Hungry?</p>
+          <h1>Don't Wait!</h1>
+          <p class="tagline">Let's start ordering food now</p>
+
+          <div class="hero-ctas">
+            <a class="outline-pill" href="Menu/menu.html">Check Out Menu</a>
+            <button class="solid-pill" type="button" data-add-featured>Add Jollof</button>
+          </div>
+        </section>
+
+        <section class="plate-stage">
+          <div class="plate-rings">
+            <img src="assets/images/hero-jollof-premium.jpg" alt="Jollof rice with grilled chicken and roasted fish" />
+          </div>
+        </section>
+
+        <aside class="social-rail">
+          <a href="#" aria-label="Facebook" data-social="Facebook"><span>f</span></a>
+          <a href="#" aria-label="TikTok" data-social="TikTok"><span>t</span></a>
+          <a href="#" aria-label="Instagram" data-social="Instagram"><span>ig</span></a>
+          <a href="#" aria-label="WhatsApp" data-social="WhatsApp"><span>w</span></a>
+        </aside>
+      </div>
+
+
+      <section class="meal-strip">
+        <a class="meal-card active" href="Meal/meal.html?meal=party-jollof">
+          <img src="assets/images/hero-jollof-premium.jpg" alt="Party jollof rice" />
+          <div>
+            <h2>Party Jollof</h2>
+            <p>Rich orange jollof with grilled chicken and peppered fish.</p>
+          </div>
+        </a>
+
+        <a class="meal-card" href="Meal/meal.html?meal=grilled-chicken">
+          <img src="assets/images/grilled-chicken.jpg" alt="Grilled chicken" />
+          <div>
+            <h2>Grilled Chicken</h2>
+            <p>Juicy flame-grilled cuts with fresh herbs and spicy sauce.</p>
+          </div>
+        </a>
+
+      </section>
+
+      <section class="hero-stats">
+        <article>
+          <span class="stat-icon">8</span>
+          <div>
+            <h2>Best Chef</h2>
+            <p>Freshly cooked meals with proper Naija spice.</p>
+          </div>
+        </article>
+
+        <article>
+          <span class="stat-icon">38</span>
+          <div>
+            <h2>Best Menu</h2>
+            <p>Rice, pasta, fries, grilled chicken and sauces.</p>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="food-marquee reveal-lift" aria-label="Scrolling featured meals">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <a href="Meal/meal.html?meal=party-jollof">
+            <img src="assets/images/hero-jollof-premium.jpg" alt="Party jollof rice" />
+            <span>Jollof Rice</span>
+          </a>
+          <a href="Meal/meal.html?meal=party-jollof">
+            <img src="assets/images/jollof-rice.jpg" alt="Fried rice with chicken" />
+            <span>Fried Rice</span>
+          </a>
+          <a href="Meal/meal.html?meal=pasta-bowl">
+            <img src="assets/images/pasta.jpg" alt="Spaghetti with sauce" />
+            <span>Spaghetti</span>
+          </a>
+          <a href="Meal/meal.html?meal=grilled-chicken">
+            <img src="assets/images/grilled-chicken.jpg" alt="Chicken and chips" />
+            <span>Chicken & Chips</span>
+          </a>
+          <a href="Meal/meal.html?meal=burger-fries">
+            <img src="assets/images/burger.jpg" alt="Burger and fries" />
+            <span>Burger & Fries</span>
+          </a>
+          <a href="Meal/meal.html?meal=loaded-pizza">
+            <img src="assets/images/pizza.jpg" alt="Pizza slices" />
+            <span>Pizza</span>
+          </a>
+          <a href="Meal/meal.html?meal=grilled-chicken">
+            <img src="assets/images/jollof-rice.jpg" alt="Rice and chicken sauce" />
+            <span>Rice & Chicken</span>
+          </a>
+        </div>
+
+        <div class="marquee-group" aria-hidden="true">
+          <a href="Meal/meal.html?meal=party-jollof" tabindex="-1">
+            <img src="assets/images/hero-jollof-premium.jpg" alt="" />
+            <span>Jollof Rice</span>
+          </a>
+          <a href="Meal/meal.html?meal=party-jollof" tabindex="-1">
+            <img src="assets/images/jollof-rice.jpg" alt="" />
+            <span>Fried Rice</span>
+          </a>
+          <a href="Meal/meal.html?meal=pasta-bowl" tabindex="-1">
+            <img src="assets/images/pasta.jpg" alt="" />
+            <span>Spaghetti</span>
+          </a>
+          <a href="Meal/meal.html?meal=grilled-chicken" tabindex="-1">
+            <img src="assets/images/grilled-chicken.jpg" alt="" />
+            <span>Chicken & Chips</span>
+          </a>
+          <a href="Meal/meal.html?meal=burger-fries" tabindex="-1">
+            <img src="assets/images/burger.jpg" alt="" />
+            <span>Burger & Fries</span>
+          </a>
+          <a href="Meal/meal.html?meal=loaded-pizza" tabindex="-1">
+            <img src="assets/images/pizza.jpg" alt="" />
+            <span>Pizza</span>
+          </a>
+          <a href="Meal/meal.html?meal=grilled-chicken" tabindex="-1">
+            <img src="assets/images/jollof-rice.jpg" alt="" />
+            <span>Rice & Chicken</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section kitchen-board-section reveal-lift" id="about">
+      <div class="kitchen-board">
+        <div class="board-copy reveal-child">
+          <p>Kitchen Board</p>
+          <h2>Pick a hot plate without scrolling forever.</h2>
+          <span>Rice bowls, beans, grills, pasta and desserts are grouped for quick ordering.</span>
+
+          <div class="board-tags" aria-label="Popular menu groups">
+            <a href="Menu/menu.html?search=rice">Rice Meals</a>
+            <a href="Menu/menu.html?search=beans">Beans</a>
+            <a href="Menu/menu.html?search=chicken">Chicken</a>
+            <a href="Menu/menu.html?search=dessert">Desserts</a>
+          </div>
+        </div>
+
+        <div class="board-feature reveal-child">
+          <img src="assets/images/hero-jollof-premium.jpg" alt="Party jollof combo" />
+          <div>
+            <span>Today&apos;s Tray</span>
+            <h3>Party Jollof Combo</h3>
+            <p>Smoky jollof, grilled chicken, roasted fish and house pepper sauce.</p>
+            <a href="Meal/meal.html?meal=party-jollof">View Meal</a>
+          </div>
+        </div>
+
+        <div class="board-menu reveal-child">
+          <a href="Meal/meal.html?meal=beans-plantain">
+            <span>Beans</span>
+            <strong>Beans & Plantain</strong>
+            <small>N4,200</small>
+          </a>
+
+          <a href="Meal/meal.html?meal=fried-rice-chicken">
+            <span>Rice</span>
+            <strong>Fried Rice & Chicken</strong>
+            <small>N6,400</small>
+          </a>
+
+          <a href="Meal/meal.html?meal=chicken-shawarma">
+            <span>Wrap</span>
+            <strong>Chicken Shawarma</strong>
+            <small>N4,800</small>
+          </a>
+
+          <a href="Meal/meal.html?meal=strawberry-cream-cake">
+            <span>Sweet</span>
+            <strong>Strawberry Cream Cake</strong>
+            <small>N4,800</small>
+          </a>
+
+          <a class="board-menu-cta" href="Menu/menu.html?search=all%20meals">Open Full Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section service-rhythm reveal-lift" aria-label="Dupz service promise">
+      <div class="rhythm-copy reveal-child">
+        <p class="section-kicker">Dupz Promise</p>
+        <h2>Food that moves with your day, not against it.</h2>
+        <span>
+          From office lunch to family trays, the kitchen runs on a simple rhythm:
+          clear timing, hot packing, and meals that still taste fresh when they reach you.
+        </span>
+      </div>
+
+      <div class="rhythm-line reveal-child" aria-label="Order preparation timeline">
+        <article>
+          <span>01</span>
+          <div>
+            <h3>Order lands</h3>
+            <p>Your meal enters the kitchen queue with delivery or pickup notes attached.</p>
+          </div>
+        </article>
+        <article>
+          <span>02</span>
+          <div>
+            <h3>Kitchen fires up</h3>
+            <p>Rice, grills, sauce and extras are timed so nothing waits cold on the counter.</p>
+          </div>
+        </article>
+        <article>
+          <span>03</span>
+          <div>
+            <h3>Packed tight</h3>
+            <p>Meals are sealed with cutlery, sauce checks and rider-ready labels.</p>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <div>
+            <h3>Served hot</h3>
+            <p>Pickup stays quick, delivery stays direct, and your plate arrives ready.</p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="rhythm-panel reveal-child">
+        <div>
+          <strong>25-35</strong>
+          <span>min delivery window</span>
+        </div>
+        <div>
+          <strong>20</strong>
+          <span>min pickup target</span>
+        </div>
+        <p>Need a tray for a group? Order early and we will pace the cooking so everything leaves the kitchen together.</p>
+        <a href="Contact/Contact.html">Plan a group order</a>
+      </aside>
+    </section>
+
+    <section class="home-section category-showcase reveal-lift">
+      <div class="section-heading centered reveal-child">
+        <p>Explore More</p>
+        <h2>Rice, pasta, fries and saucy comfort meals.</h2>
+      </div>
+
+      <div class="showcase-grid">
+        <a class="reveal-child" href="Meal/meal.html?meal=party-jollof">
+          <img src="assets/images/hero-jollof-premium.jpg" alt="Party jollof rice" />
+          <span>Jollof Rice</span>
+        </a>
+        <a class="reveal-child" href="Meal/meal.html?meal=fried-rice-chicken">
+          <img src="assets/images/jollof-rice.jpg" alt="Fried rice with chicken" />
+          <span>Fried Rice</span>
+        </a>
+        <a class="reveal-child" href="Meal/meal.html?meal=pasta-bowl">
+          <img src="assets/images/pasta.jpg" alt="Spaghetti with sauce" />
+          <span>Spaghetti</span>
+        </a>
+        <a class="reveal-child" href="Meal/meal.html?meal=grilled-chicken">
+          <img src="assets/images/grilled-chicken.jpg" alt="Chicken and chips" />
+          <span>Chicken & Chips</span>
+        </a>
+        <a class="reveal-child" href="Meal/meal.html?meal=burger-fries">
+          <img src="assets/images/burger.jpg" alt="Burger and fries" />
+          <span>Burger & Fries</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-section ordering-band reveal-lift" id="location">
+      <div class="reveal-child">
+        <p class="section-kicker">Location</p>
+        <h2>Find us in Lagos and order a hot plate.</h2>
+        <p class="location-copy">12 Dupz Avenue, Victoria Island. Open daily from 8:00 AM to 10:00 PM.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="reveal-child">
+          <span>01</span>
+          <h3>Choose Meal</h3>
+          <p>Browse jollof rice, fried rice, spaghetti, chicken, chips and drinks.</p>
+        </article>
+        <article class="reveal-child">
+          <span>02</span>
+          <h3>Add Extras</h3>
+          <p>Add extra chicken, fries, sauce, pepper mix or chilled drinks.</p>
+        </article>
+        <article class="reveal-child">
+          <span>03</span>
+          <h3>Enjoy Hot</h3>
+          <p>Your order is prepared with proper Dupz spice.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-section feast-cta reveal-lift" id="contact">
+      <img class="reveal-child" src="assets/images/grilled-chicken.jpg" alt="Grilled chicken and chips" />
+      <div class="reveal-child">
+        <p>Weekend Feast</p>
+        <h2>Big hunger deserves a golden table.</h2>
+        <a class="solid-pill" href="Menu/menu.html">Start Ordering</a>
+      </div>
+      <img class="reveal-child" src="assets/images/pasta.jpg" alt="Spaghetti with sauce" />
+    </section>
+  </main>
+
+  <script src="nav.js"></script>
+  <script src="Home/home.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   if (!document.querySelector(".whatsapp-help")) {
     const whatsappHelp = document.createElement("a");
     whatsappHelp.className = "whatsapp-help";
-    whatsappHelp.href = "https://wa.me/2348028084696?text=Hello%20Golden%20Plate%2C%20I%20need%20help%20with%20my%20order.";
+    whatsappHelp.href = "https://wa.me/2348121638903?text=Hello%20Dupz%2C%20I%20need%20help%20with%20my%20order.";
     whatsappHelp.target = "_blank";
     whatsappHelp.rel = "noopener";
     whatsappHelp.setAttribute("aria-label", "Chat with Dupz on WhatsApp");

@@ -6,10 +6,6 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/frontend/Home/index.html"
-    },
-    {
       "source": "/menu",
       "destination": "/frontend/Menu/menu.html"
     },

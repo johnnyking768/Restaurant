@@ -311,7 +311,7 @@ function getSampleOrders() {
       createdAt: new Date().toISOString(),
       customer: {
         name: "Ada Okafor",
-        phone: "+234 802 000 1844",
+        phone: "+234 8121638903",
         email: "ada@example.com",
         address: "24 Admiralty Way, Lekki Phase 1"
       },
@@ -331,7 +331,7 @@ function getSampleOrders() {
       createdAt: new Date(Date.now() - 1000 * 60 * 24).toISOString(),
       customer: {
         name: "Tunde Bello",
-        phone: "+234 803 222 9011",
+        phone: "+234 8121638903",
         email: "tunde@example.com",
         address: "Pickup counter"
       },
